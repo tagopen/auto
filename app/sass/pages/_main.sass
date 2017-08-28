@@ -1,0 +1,282 @@
++comment('general style')
++ic
+@each $sprite in $spritesheet-sprites
+  .ic--#{nth($sprite, 10)}
+    &:before
+      +bs($sprite)
++cm('form')
+.text-danger
+  color: $text-danger
+  text-align: left
+.form-group.error
+  .form-control
+    border-color: $form-control-error-border-color
+[type=submit]:disabled
+  animation: progress-bar-stripes 2s linear infinite
+  background-image: $btn-submit-loading-bg
+  background-size: 40px 40px
+@keyframes progress-bar-stripes
+  from
+    background-position: 40px 0
+  to
+    background-position: 0 0
+.ic
+  vertical-align: top  
+a
+  outline: none
+  &:hover,
+  &:focus
+    text-decoration: none
+    outline: none     
+* 
+  outline: 0 !important      
++cm('modal')
+.modal
+  -webkit-overflow-scrolling: touch
+  transform: translateZ(0)
+.modal.show 
+  display: flex !important
+  align-items: center
+.modal-dialog
+  position: relative
+  margin: auto
+.body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+.main
+  flex: 1
++comment("home page style")
+.heading
+  font: 900 30px/32px $font-gotham
+  color: $color-dark
+  text-align: center
+  &--white
+    color: #fff
++r(992)
+  .heading  
+    font: 900 36px/42px $font-gotham
++comment("intro style")    
+.intro
+  padding: 80px 0
+  overflow: hidden
+  &__heading
+    margin-bottom: 25px
+  &__elem
+    margin-bottom: 25px
+    text-align: center  
+  &__text
+    font: 500 18px/27px $font-gotham 
+    color: $color-dark
+    text-align: center
+  &__icon
+    display: inline-block
+    height: 70px
+    width: 70px
+    background-color: #ffb71d
+    border: 1px solid white
+    box-shadow: 0 0 25px rgba(255, 183, 29, 0.55)
+    border-radius: 50%
+    text-align: center
+    line-height: 62px
+    margin-bottom: 15px
+    img
+      display: inline-block
+      height: 40px
+      width: 40px  
+  &__picture
+    height: 300px     
+  &__img
+    position: absolute
+    top: 35%
+    img
+      max-width: 100%
+    &--2
+      left: 10px
+      margin-top: 15px
+    &--3
+      left: 20px 
+      margin-top: 30px  
+  &__zoom
+    position: absolute
+    top: -110px
+    left: 0 
++r(540)
+  .intro
+    &__zoom
+      top: -85px
+      left: 25px             
++r(760)
+  .intro
+    &__heading
+      margin-bottom: 50px    
+    &__elem
+      margin-bottom: 40px 
+    &__image
+      display: table-cell  
+      vertical-align: middle 
+    &__info
+      display: table-cell  
+      vertical-align: middle
+      padding-left: 30px
+    &__text
+      text-align: left  
+    &__picture
+      position: relative
+      height: 340px
+    &__img
+      position: absolute
+      top: 0
+      transform: translate3d(2000px, 0, 0)
+      &--2
+        left: 20px
+      &--3
+        left: 40px  
+    &__zoom
+      position: absolute
+      top: -80px
+      left: 60px   
+      z-index: 25
+      transform: scale(0)
+    &__light
+      &--1
+        position: absolute
+        top: 125px
+        left: -40px
+      &--2
+        position: absolute
+        top: 130px
+        left: 150px   
+  @keyframes zoomIn 
+    from 
+      opacity: 0
+    100%
+      opacity: 1
+      transform: scale(1)
+  .zoomIn 
+    animation-name: zoomIn 
+    animation-duration: 1.5s 
+    animation-fill-mode: forwards
+    animation-delay: 3.5s
+  @keyframes fadeInRightBig 
+    from 
+      opacity: 0
+      transform: translate3d(2000px, 0, 0)
+    to 
+      opacity: 1
+      transform: none
+  .fadeInRightBig1 
+    animation-name: fadeInRightBig
+    animation-duration: 1.5s
+    animation-fill-mode: forwards 
+  .fadeInRightBig2
+    animation-name: fadeInRightBig
+    animation-duration: 1.5s
+    animation-delay: .5s
+    animation-fill-mode: forwards 
+  .fadeInRightBig3
+    animation-name: fadeInRightBig
+    animation-duration: 1.5s
+    animation-delay: 1s
+    animation-fill-mode: forwards              
+  @keyframes flash 
+    from, 50%, to 
+      opacity: 1
+    25%, 75% 
+      opacity: 0
+  .flash 
+    animation-name: flash 
+    animation-duration: .7s
+    animation-delay: 3s             
++r(992)
+  .intro
+    &__light
+      &--2
+        top: 140px            
++r(1200)
+  .intro
+    padding: 85px 0 
+    background: url(../img/introbg.png) no-repeat
+    background-size: contain
+    background-position: right top
+    &__heading
+      margin-bottom: 60px
+    &__elem
+      margin-bottom: 80px
+    &__text
+      font: 500 20px/30px $font-gotham  
+    &__picture
+      margin-top: 100px 
+    &__img
+      img
+        max-width: none  
+    &__zoom
+      top: -70px  
+    &__light
+      &--1
+        top: 125px
+        left: -40px
+      &--2
+        top: 145px
+        left: 150px 
++comment("advantage style")  
+.advantage
+  padding: 55px 0
+  background: url(../img/advantagebg.jpg) no-repeat
+  background-size: cover
+  background-position: center
+  background-attachment: fixed
+  &__heading
+    margin-bottom: 60px
+  &__box
+    position: relative
+    margin: 0 -5px 60px
+    padding: 45px 20px 25px
+    background-color: white
+    box-shadow: 0 0 0 10px #ffb71d
+    min-height: 360px
+  &__text
+    font: 500 18px/27px $font-gotham
+    color: $color-dark
+    text-align: center 
+  &__icon
+    position: absolute
+    left: 50%
+    margin-left: -34px
+    top: 0
+    margin-top: -39px
+    height: 68px
+    width: 68px  
+    border-radius: 50%
+    background-color: #FFF
+    border: 10px solid #ffb71d
+    text-align: center
+    .fa
+      display: inline-block
+      color: $color-dark
+      line-height: 50px
+      font-size: 18px
+  &__image
+    img
+      position: absolute
+      bottom: 10px
+      right: 10px    
++r(760)
+  .advantage
+    padding: 90px 0
+    &__box
+      margin: 0 -5px 20px
+    &__icon
+      left: 0
+      margin-left: -10px  
++r(992)
+  .advantage
+    &__box
+      margin: 0 
+      box-shadow: inset 0 0 0 10px #ffb71d     
+      padding: 55px 35px 35px
+      min-height: 400px
+    &__icon
+      margin-top: -35px
+      margin-left: 0  
+

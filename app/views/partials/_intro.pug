@@ -1,0 +1,27 @@
+section.intro
+  .container
+    .row.justify-content-center
+      .col-24.col-md-20.col-lg-16
+        h2.heading.intro__heading!=content.index.intro.heading
+    .row
+      .col-24.col-md-20.col-xl-12
+        .intro__box
+          each item, i in content.index.intro.items   
+            .intro__elem 
+              .intro__image
+                .intro__icon
+                  img(src!=item.img.src, alt!=item.img.alt)
+              .intro__info
+                .intro__text!=item.text 
+      .col-24.col-xl-12
+        .intro__picture
+          .intro__img.intro__img--1.animate(data-animation="fadeInRightBig1")
+            img(src!=content.index.intro.auto1, alt="Автомобиль")
+          .intro__img.intro__img--2.animate(data-animation="fadeInRightBig2")
+            img(src!=content.index.intro.auto2, alt="Автомобиль")
+          .intro__img.intro__img--3.animate(data-animation="fadeInRightBig3")    
+            img(src!=content.index.intro.auto3, alt="Автомобиль")   
+            .intro__zoom.animate(data-animation="zoomIn")
+              img(src!=content.index.intro.zoom, alt="Иконка")
+            i.ic.ic--light.intro__light--1.hidden-sm-down.animate(data-animation="flash")
+            i.ic.ic--light.intro__light--2.hidden-sm-down.animate(data-animation="flash")          
