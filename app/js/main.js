@@ -38,5 +38,16 @@
       remove: false
     });
   }
+
+  $(function() {
+    var $items = $('.item'),
+    active = "item--active",
+    date = new Date(),
+    today = date.getDay() || 7;
+
+    $items.removeClass(active)
+          .slice(0, today)
+          .addClass(active);
+ });
   
 })(jQuery); // End of use strict
