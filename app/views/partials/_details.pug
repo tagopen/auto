@@ -1,0 +1,49 @@
+section.detail
+  .container
+    .row
+      .col-24.col-md-18.col-lg-13
+        h2.heading.heading--white.detail__heading!=content.index.detail.heading
+      .col-md-6.col-lg-11.hidden-sm-down
+        .detail__image
+          img.hidden-md-down(src!=content.index.detail.img.src, alt!=content.index.detail.img.alt) 
+          img.img-fluid.hidden-lg-up(src!=content.index.detail.img2.src, alt!=content.index.detail.img2.alt)   
+      .col-24.col-md-22.col-lg-17
+        h3.detail__subheading!=content.index.detail.subheading
+      .col-24.col-md-16
+        .detail__text!=content.index.detail.text
+      .col-24.col-md-22.col-lg-14  
+        form.contactForm.cost__form(method='post', action='./mail/mail.php')
+          .row
+            .form-group.col-20.offset-2.col-md-11.offset-md-0.col-lg-10
+              input.form-control.form__input.form__phone.form__input--phone(type="tel", name="phone", placeholder="+38 (___) ___-__-__", required)
+            .col-24.col-md-13.col-lg-14  
+              .text-center
+                button.button.button--size.detail__btn(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.index.detail.btn
+      .col-24.col-md-22.col-lg-14
+        .detail__register
+          .row.hidden-sm-down
+            .col-4
+              .detail__flag 
+                i.ic.ic--flagcolor
+                i.ic.ic--flag
+            .col-4
+              .detail__flag 
+                i.ic.ic--flagcolor
+                i.ic.ic--flag 
+            .col-4
+              .detail__flag 
+                i.ic.ic--flagcolor
+                i.ic.ic--flag 
+            .col-4
+              .detail__flag 
+                i.ic.ic--flagcolor
+                i.ic.ic--flag 
+            .col-4
+              .detail__flag 
+                i.ic.ic--flagcolor
+                i.ic.ic--flag 
+            .col-4
+              .detail__flag 
+                i.ic.ic--flagcolor
+                i.ic.ic--flag 
+          .detail__info!=content.index.detail.info                                   

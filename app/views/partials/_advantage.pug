@@ -4,27 +4,31 @@ section.advantage
       .col-24.col-md-20.col-lg-18
         h2.heading.heading--white.advantage__heading!=content.index.advantage.heading
     .row.justify-content-center
-      .col-24.col-md-12.col-lg-8
+      .col-24.col-md-12.col-xl-8.advantage__col.animate(data-animation="fadeInRightBig1")
         .advantage__box
-          .advantage__text!=content.index.advantage.text1
-          .advantage__image
-            img(src!=content.index.advantage.image1)
           .advantage__icon
             i.fa.fa-check(aria-hidden="true")
-      .col-24.col-md-12.col-lg-8
+          .advantage__info    
+            .advantage__text!=content.index.advantage.text1
+            .advantage__image
+              img(src!=content.index.advantage.image1)
+      .col-24.col-md-12.col-xl-8.advantage__col.animate(data-animation="fadeInRightBig2")
         .advantage__box
-          .advantage__text!=content.index.advantage.text2
-          .advantage__image
-            img(src!=content.index.advantage.image2)
-            i.ic.ic--light.advantage__light--1.hidden-sm-down.animate(data-animation="flash")
-            i.ic.ic--light.advantage__light--1.hidden-sm-down.animate(data-animation="flash")  
           .advantage__icon
             i.fa.fa-check(aria-hidden="true")
-      .col-24.col-md-12.col-lg-8
+          .advantage__info
+            .advantage__text!=content.index.advantage.text2
+            .advantage__image
+              img(src!=content.index.advantage.image2)
+              i.ic.ic--light.advantage__light--1.hidden-sm-down.animate(data-animation="flash")
+              i.ic.ic--light.advantage__light--2.hidden-sm-down.animate(data-animation="flash")  
+      .col-24.col-md-12.col-xl-8.advantage__col.animate(data-animation="fadeInRightBig3")
         .advantage__box
-          .advantage__text!=content.index.advantage.text3
-          .advantage__image
-            img(src!=content.index.advantage.image3)
           .advantage__icon
             i.fa.fa-check(aria-hidden="true")
+          .advantage__info
+            .advantage__text!=content.index.advantage.text3
+            .advantage__image
+              img(src!=content.index.advantage.image3)
+
                

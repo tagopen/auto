@@ -46,6 +46,30 @@ a
   min-height: 100vh
 .main
   flex: 1
+.button
+  padding: 18px 15px 17px
+  text-align: center
+  background-color: #ffbe11
+  background-image: linear-gradient(to top, #b67f00 0%, #e08212 100%)
+  text-shadow: 0.5px 0.9px 2px rgba(255, 255, 255, 0.35)
+  color: #1b1b1b
+  font: 700 14px/16px $font-gotham
+  text-transform: uppercase
+  border: 0
+  cursor: pointer
+  border-radius: 5px
+  letter-spacing: 1px
+  &--size
+    width: 100%
+.form
+  &__input
+    color: #1b1b1b
+    font: 400 14px/16px $font-gotham    
+    padding: 18px 15px 17px
+    width: 100%
+    text-align: center
+    text-transform: uppercase
+    border-radius: 5px
 +comment("home page style")
 .heading
   font: 900 30px/32px $font-gotham
@@ -231,10 +255,14 @@ a
   &__box
     position: relative
     margin: 0 -5px 60px
-    padding: 45px 20px 25px
     background-color: white
     box-shadow: 0 0 0 10px #ffb71d
-    min-height: 360px
+    min-height: 400px
+  &__info
+    padding: 45px 15px 25px 
+    min-height: 400px
+    position: relative
+    overflow: hidden
   &__text
     font: 500 18px/27px $font-gotham
     color: $color-dark
@@ -259,24 +287,295 @@ a
   &__image
     img
       position: absolute
-      bottom: 10px
-      right: 10px    
+      bottom: 0
+      right: -30px   
 +r(760)
   .advantage
     padding: 90px 0
+    overflow: hidden
+    &__col
+      transform: translate3d(2000px, 0, 0)
     &__box
       margin: 0 -5px 20px
     &__icon
       left: 0
       margin-left: -10px  
-+r(992)
+    &__image
+      img
+        right: 0 
+    &__light
+      &--1
+        position: absolute
+        bottom: 63px
+        right: 250px     
+      &--2
+        position: absolute
+        bottom: 57px
+        right: 103px       
++r(1200)
   .advantage
     &__box
-      margin: 0 
-      box-shadow: inset 0 0 0 10px #ffb71d     
-      padding: 55px 35px 35px
-      min-height: 400px
+      box-shadow: 0 0 0 10px #ffb71d     
+      min-height: 420px
+      margin: 0 10px
+    &__info
+      padding: 45px 25px 35px
+      min-height: 420px 
     &__icon
       margin-top: -35px
-      margin-left: 0  
-
++comment("reasons style")       
+.reason
+  padding: 50px 0 40px
+  overflow: hidden
+  &__heading
+    margin-bottom: 30px
+  &__box
+    margin-bottom: 20px  
+  &__image
+    position: relative
+    text-align: center
+    margin: 0 -15px 30px
+    img
+      display: inline-block  
+    .ic
+      position: absolute 
+      &--reason1
+        right: 0
+        bottom: 0
+      &--reason2
+        left: 0
+        bottom: 0
+      &--reason3
+        right: 0
+        bottom: -40px
+      &--reason4
+        left: 0
+        bottom: -15px    
+  &__title
+    font: 500 26px/27px $font-gotham 
+    color: $color-dark
+    text-align: center
+    margin-bottom: 20px
+  &__text
+    font: 400 18px/27px $font-gotham 
+    color: $color-dark
+    text-align: center
+    &--span
+      color: #fdb61d
+      font: 500 18px/27px $font-gotham    
+    &--hover 
+      position: relative
+      display: inline-block
+      color: #fdb61d
+      font: 500 18px/27px $font-gotham 
+      cursor: pointer 
+      transition: all .3s ease
+      &:hover,
+      &:focus
+        .reason__text--tooltip
+          opacity: 1
+          visibility: visible
+    &--tooltip 
+      transition: all .3s ease
+      position: absolute
+      opacity: 0
+      visibility: hidden
+      width: 400px
+      top: 40px
+      left: 50%
+      margin-left: -240px
+      display: block
+      background-color: #FFF
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2)
+      padding: 10px
+      font: 400 14px/20px $font-gotham 
+      color: $color-dark
+      &:before
+        content: ''
+        position: absolute
+        left: 50%
+        top: -20px
+        margin-left: -10px
+        display: block
+        width: 0
+        height: 0
+        border-left: 10px solid transparent
+        border-bottom: 20px solid #fff
+        border-right: 10px solid transparent
++r(760)
+  .reason
+    overflow: hidden
+    &__heading
+      margin-bottom: 60px
+    &__box
+      padding-bottom: 60px 
+      margin-bottom: 0  
+      overflow: hidden 
+    &__image
+      margin: 0 0 40px  
+      .ic
+        transform: translate3d(1000px, 0, 0)
+        &--reason1
+          right: 72px
+        &--reason2
+          left: 40px
+          bottom: -40px
+        &--reason3
+          right: 40px
+        &--reason4
+          left: 40px      
+  @keyframes fadeInLeftBig
+    from 
+      opacity: 0
+      transform: translate3d(-2000px, 0, 0)
+    to 
+      opacity: 1
+      transform: none
+  .fadeInLeftBig 
+    animation-name: fadeInLeftBig
+    animation-duration: 1.5s
+    animation-fill-mode: forwards
+  @keyframes fadeInRightBig
+    from 
+      opacity: 0
+      transform: translate3d(2000px, 0, 0)
+    to 
+      opacity: 1
+      transform: none
+  .fadeInRightBig 
+    animation-name: fadeInRightBig
+    animation-duration: 1.5s
+    animation-fill-mode: forwards
+  @keyframes bounceInUp 
+    from, 60%, 75%, 90%, to 
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+    from 
+      opacity: 0
+      transform: translate3d(0, 3000px, 0)
+    60% 
+      opacity: 1
+      transform: translate3d(0, -20px, 0)
+    75% 
+      transform: translate3d(0, 10px, 0)
+    90% 
+      transform: translate3d(0, -5px, 0)
+    to 
+      transform: translate3d(0, 0, 0)
+  .bounceInUp
+    animation-name: bounceInUp  
+    animation-duration: 1s
+    animation-fill-mode: forwards
+    animation-delay: 1s
++r(992)
+  .reason
+    padding-bottom: 40px
+    &__image
+      margin-bottom: 0
+      .ic        
+        &--reason1
+          right: 0
+        &--reason2
+          left: 0
+        &--reason3
+          right: -30px
+        &--reason4
+          left: 0
+          bottom: -30px  
+    &__text
+      &--tooltip
+        top: 50%
+        left: 120% 
+        margin-top: -90px
+        margin-left: 0    
+        &:before
+          top: 50%
+          left: 0
+          margin-top: -10px
+          margin-left: -30px
+          border-top: 10px solid transparent
+          border-right: 20px solid #fff
+          border-bottom: 10px solid transparent           
++r(1200)
+  .reason
+    &__title        
+      font: 500 30px/45px $font-gotham 
+      margin-bottom: 30px
+      text-align: left
+    &__text
+      text-align: left  
++comment("detail style")    
+.detail
+  background: url(../img/detailbg.jpg) no-repeat
+  background-size: cover
+  background-position: center
+  background-attachment: fixed
+  padding-bottom: 40px
+  &__heading
+    padding-top: 50px
+    margin-bottom: 25px
+  &__subheading
+    font: 500 18px/27px $font-gotham
+    color: #fff 
+    margin-bottom: 25px
+    text-align: center
+  &__text
+    font: 700 18px/27px $font-gotham
+    color: #ffb71d  
+    text-align: center
+    margin-bottom: 20px
+  &__info  
+    font: 400 14px/21px $font-gotham
+    color: #fff
+    text-align: center
+    margin-top: 15px
+    &--color
+      display: inline-block
+      font: 500 14px/21px $font-gotham
+      color: #ffb71d
++r(760)
+  .detail
+    padding-bottom: 70px
+    &__heading
+      padding-top: 90px
+      margin-bottom: 60px
+      text-align: left
+    &__subheading
+      font: 500 20px/30px $font-gotham
+      text-align: left
+      margin-bottom: 30px  
+    &__text
+      font: 700 20px/30px $font-gotham
+      text-align: left
+      margin-bottom: 25px
+    &__image
+      position: relative
+      img
+        position: absolute
+        top: 0
+        left: 0
+    &__register
+      position: relative
+      margin-top: 40px
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        height: 5px
+        background-color: #FFF
+        border-radius: 5px 
+        top: 30px
+        left: 0   
+    &__flag
+      text-align: center
+      .ic
+        &--flag
+          display: none      
++r(992)
+  .detail 
+    &__heading
+      margin-bottom: 30px
+    &__subheading         
+      font: 500 24px/36px $font-gotham
+    &__text
+      font: 700 24px/36px $font-gotham  
