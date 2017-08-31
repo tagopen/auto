@@ -4,7 +4,7 @@ section.detail
       .col-24.col-md-18.col-lg-13
         h2.heading.heading--white.detail__heading!=content.index.detail.heading
       .col-md-6.col-lg-11.hidden-sm-down
-        .detail__image
+        .detail__image.animate(data-animation!=content.index.detail.image.animation)
           img.hidden-md-down(src!=content.index.detail.img.src, alt!=content.index.detail.img.alt) 
           img.img-fluid.hidden-lg-up(src!=content.index.detail.img2.src, alt!=content.index.detail.img2.alt)   
       .col-24.col-md-22.col-lg-17
@@ -46,4 +46,5 @@ section.detail
               .detail__flag 
                 i.ic.ic--flagcolor
                 i.ic.ic--flag 
-          .detail__info!=content.index.detail.info                                   
+          .detail__info!=content.index.detail.info
+          i.ic.ic--detailcar.animate(data-animation!=content.index.detail.car.animation)                                   

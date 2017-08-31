@@ -126,28 +126,34 @@
   background: url(../img/sprite.png) 0px 0px no-repeat;
 }
 
+.ic--detailcar:before {
+  width: 142px;
+  height: 56px;
+  background: url(../img/sprite.png) -564px -335px no-repeat;
+}
+
 .ic--flag:before {
   width: 35px;
   height: 40px;
-  background: url(../img/sprite.png) -683px -335px no-repeat;
+  background: url(../img/sprite.png) -716px -335px no-repeat;
 }
 
 .ic--flagcolor:before {
   width: 35px;
   height: 40px;
-  background: url(../img/sprite.png) -564px -412px no-repeat;
+  background: url(../img/sprite.png) -683px -401px no-repeat;
 }
 
 .ic--light:before {
   width: 109px;
   height: 67px;
-  background: url(../img/sprite.png) -564px -335px no-repeat;
+  background: url(../img/sprite.png) -564px -401px no-repeat;
 }
 
 .ic--question:before {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite.png) -728px -335px no-repeat;
+  background: url(../img/sprite.png) -728px -401px no-repeat;
 }
 
 .ic--reason1:before {
@@ -1119,6 +1125,12 @@ a:hover, a:focus {
   .detail__register {
     position: relative;
     margin-top: 40px;
+    padding-right: 50px;
+  }
+  .detail__register .ic--detailcar {
+    position: absolute;
+    right: -80px;
+    top: 0;
   }
   .detail__register:before {
     content: '';
@@ -1143,6 +1155,70 @@ a:hover, a:focus {
   }
   .detail__flag--active .ic--flagcolor {
     display: inline-block;
+  }
+  @-webkit-keyframes FadeInUpBigImg {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -2000px, 0);
+              transform: translate3d(0, -2000px, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+              transform: none;
+    }
+  }
+  @keyframes FadeInUpBigImg {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -2000px, 0);
+              transform: translate3d(0, -2000px, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+              transform: none;
+    }
+  }
+  .FadeInUpBigImg {
+    -webkit-animation-name: FadeInUpBigImg;
+            animation-name: FadeInUpBigImg;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes FadeInLeftBigCar {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-2000px, 0, 0);
+              transform: translate3d(-2000px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+              transform: none;
+    }
+  }
+  @keyframes FadeInLeftBigCar {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-2000px, 0, 0);
+              transform: translate3d(-2000px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+              transform: none;
+    }
+  }
+  .FadeInLeftBigCar {
+    -webkit-animation-name: FadeInLeftBigCar;
+            animation-name: FadeInLeftBigCar;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
 }
 
@@ -1272,9 +1348,6 @@ a:hover, a:focus {
   .tour {
     overflow: hidden;
   }
-  .tour .row {
-    overflow: hidden;
-  }
   .tour__row {
     padding-top: 70px;
     overflow: visible !important;
@@ -1283,8 +1356,8 @@ a:hover, a:focus {
     margin-bottom: 0;
   }
   .tour__title {
-    -webkit-transform: translate3d(1000px, 0, 0);
-            transform: translate3d(1000px, 0, 0);
+    -webkit-transform: translate3d(3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
   }
   .tour__box {
     padding: 40px 20px;
@@ -1295,8 +1368,8 @@ a:hover, a:focus {
   }
   .tour__item {
     margin-bottom: 45px;
-    -webkit-transform: translate3d(1000px, 0, 0);
-            transform: translate3d(1000px, 0, 0);
+    -webkit-transform: translate3d(3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
   }
   .tour__elem {
     position: relative;
@@ -1307,16 +1380,16 @@ a:hover, a:focus {
     -webkit-border-radius: 0px 40px 40px 0px;
             border-radius: 0px 40px 40px 0px;
     padding: 10px 50px 10px 25px;
-    -webkit-transform: translate3d(1000px, 0, 0);
-            transform: translate3d(1000px, 0, 0);
+    -webkit-transform: translate3d(3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
   }
   .tour__elem--right {
     margin-left: -15px;
     -webkit-border-radius: 40px 0 0 40px;
             border-radius: 40px 0 0 40px;
     padding: 10px 25px 10px 50px;
-    -webkit-transform: translate3d(1000px, 0, 0);
-            transform: translate3d(1000px, 0, 0);
+    -webkit-transform: translate3d(3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
   }
   .tour__elem--text {
     font: 400 18px/27px "GothamPro", sans-serif;
@@ -1488,30 +1561,10 @@ a:hover, a:focus {
             animation-duration: 1.5s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
-    -webkit-animation-delay: .5s;
-            animation-delay: .5s;
-  }
-  .tourFadeInRight2 {
-    -webkit-animation-name: tourFadeInRight;
-            animation-name: tourFadeInRight;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-  }
-  .tourFadeInRight3 {
-    -webkit-animation-name: tourFadeInRight;
-            animation-name: tourFadeInRight;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
     -webkit-animation-delay: 1.5s;
             animation-delay: 1.5s;
   }
-  .tourFadeInRight4 {
+  .tourFadeInRight2 {
     -webkit-animation-name: tourFadeInRight;
             animation-name: tourFadeInRight;
     -webkit-animation-duration: 1.5s;
@@ -1521,27 +1574,27 @@ a:hover, a:focus {
     -webkit-animation-delay: 2s;
             animation-delay: 2s;
   }
+  .tourFadeInRight3 {
+    -webkit-animation-name: tourFadeInRight;
+            animation-name: tourFadeInRight;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+  }
+  .tourFadeInRight4 {
+    -webkit-animation-name: tourFadeInRight;
+            animation-name: tourFadeInRight;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
   .tourFadeInLeft1 {
-    -webkit-animation-name: tourFadeInLeft;
-            animation-name: tourFadeInLeft;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-delay: .5s;
-            animation-delay: .5s;
-  }
-  .tourFadeInLeft2 {
-    -webkit-animation-name: tourFadeInLeft;
-            animation-name: tourFadeInLeft;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-  }
-  .tourFadeInLeft3 {
     -webkit-animation-name: tourFadeInLeft;
             animation-name: tourFadeInLeft;
     -webkit-animation-duration: 1.5s;
@@ -1550,6 +1603,26 @@ a:hover, a:focus {
             animation-fill-mode: forwards;
     -webkit-animation-delay: 1.5s;
             animation-delay: 1.5s;
+  }
+  .tourFadeInLeft2 {
+    -webkit-animation-name: tourFadeInLeft;
+            animation-name: tourFadeInLeft;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  .tourFadeInLeft3 {
+    -webkit-animation-name: tourFadeInLeft;
+            animation-name: tourFadeInLeft;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
   }
 }
 

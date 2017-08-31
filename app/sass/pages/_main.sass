@@ -557,6 +557,11 @@ a
     &__register
       position: relative
       margin-top: 40px
+      padding-right: 50px
+      .ic--detailcar
+        position: absolute
+        right: -80px
+        top: 0
       &:before
         content: ''
         display: block
@@ -577,8 +582,29 @@ a
           &--flag
             display: none
           &--flagcolor
-            display: inline-block  
-
+            display: inline-block
+  @keyframes FadeInUpBigImg
+    from 
+      opacity: 0
+      transform: translate3d(0, -2000px, 0)
+    to 
+      opacity: 1
+      transform: none             
+  .FadeInUpBigImg
+    animation-name: FadeInUpBigImg
+    animation-duration: 1s
+    animation-fill-mode: forwards            
+  @keyframes FadeInLeftBigCar
+    from 
+      opacity: 0
+      transform: translate3d(-2000px, 0, 0)
+    to 
+      opacity: 1
+      transform: none             
+  .FadeInLeftBigCar
+    animation-name: FadeInLeftBigCar
+    animation-duration: 2s
+    animation-fill-mode: forwards
 +r(992)
   .detail 
     &__heading
@@ -663,15 +689,13 @@ a
 +r(760)
   .tour
     overflow: hidden
-    .row
-      overflow: hidden
     &__row
       padding-top: 70px 
       overflow: visible !important
     &__heading
       margin-bottom: 0
     &__title
-      transform: translate3d(1000px, 0, 0)   
+      transform: translate3d(3000px, 0, 0)   
     &__box
       padding: 40px 20px
       margin: 0
@@ -679,7 +703,7 @@ a
       text-align: left 
     &__item
       margin-bottom: 45px  
-      transform: translate3d(1000px, 0, 0)  
+      transform: translate3d(3000px, 0, 0)  
     &__elem
       position: relative
       margin: 0 0 20px
@@ -687,12 +711,12 @@ a
         margin-right: -15px
         border-radius: 0px 40px 40px 0px
         padding: 10px 50px 10px 25px
-        transform: translate3d(1000px, 0, 0) 
+        transform: translate3d(3000px, 0, 0) 
       &--right
         margin-left: -15px  
         border-radius: 40px 0 0 40px
         padding: 10px 25px 10px 50px
-        transform: translate3d(1000px, 0, 0)
+        transform: translate3d(3000px, 0, 0)
       &--text   
         font: 400 18px/27px $font-gotham
         text-align: left
@@ -763,37 +787,37 @@ a
     animation-name: tourFadeInRight
     animation-duration: 1.5s
     animation-fill-mode: forwards
-    animation-delay: .5s
+    animation-delay: 1.5s
   .tourFadeInRight2
     animation-name: tourFadeInRight
     animation-duration: 1.5s
     animation-fill-mode: forwards
-    animation-delay: 1s
+    animation-delay: 2s
   .tourFadeInRight3
     animation-name: tourFadeInRight
     animation-duration: 1.5s
     animation-fill-mode: forwards 
-    animation-delay: 1.5s  
+    animation-delay: 2.5s  
   .tourFadeInRight4
     animation-name: tourFadeInRight
     animation-duration: 1.5s
     animation-fill-mode: forwards 
-    animation-delay: 2s   
+    animation-delay: 3s   
   .tourFadeInLeft1 
     animation-name: tourFadeInLeft
     animation-duration: 1.5s
     animation-fill-mode: forwards
-    animation-delay: .5s
+    animation-delay: 1.5s
   .tourFadeInLeft2
     animation-name: tourFadeInLeft
     animation-duration: 1.5s
     animation-fill-mode: forwards
-    animation-delay: 1s
+    animation-delay: 2s
   .tourFadeInLeft3
     animation-name: tourFadeInLeft
     animation-duration: 1.5s
     animation-fill-mode: forwards 
-    animation-delay: 1.5s            
+    animation-delay: 2.5s            
 +r(960)
   .tour
     &__text                   
