@@ -3,31 +3,31 @@ section.tour
     .row.justify-content-center
       .col-24.col-md-22.col-lg-18
         h2.heading.tour__heading!=content.index.tour.heading
-    .row
+    .row.tour__row
       each item, i in content.index.tour.top
         .col-24.col-md-12
-          .tour__item
+          .tour__item.animate(data-animation!=item.animate)
             .tour__number(class="tour__number--"+(i+1))!=item.number
             .tour__box(class="tour__box--"+(i+1))
               .tour__text!=item.text
     .row
       .col-24.col-md-12  
-        .tour__title!=content.index.tour.with.title  
+        .tour__title.animate(data-animation!=content.index.tour.with.animation)!=content.index.tour.with.title  
         .row      
           each item, i in content.index.tour.with.content
             .col-24
-              .tour__elem.tour__elem--left.d-flex.align-items-center(class="tour__elem--"+(i+1))
+              .tour__elem.tour__elem--left.d-flex.align-items-center.animate(class="tour__elem--"+(i+1), data-animation!=item.animation)
                 .tour__elem--text!=item.text
                 .tour__elem--number.tour__elem--number-left.hidden-lg-down!=item.number
           .col-24.hidden-sm-down
             .tour__image
               img.img-fluid(src!=content.index.tour.img320.src, alt!=content.index.tour.img320.alt)        
       .col-24.col-md-12  
-        .tour__title!=content.index.tour.without.title  
+        .tour__title.animate(data-animation!=content.index.tour.without.animation)!=content.index.tour.without.title  
         .row      
           each item, i in content.index.tour.without.content
             .col-24        
-              .tour__elem.tour__elem--right.d-flex.align-items-center(class="tour__elem--"+(i+1))
+              .tour__elem.tour__elem--right.d-flex.align-items-center.animate(class="tour__elem--"+(i+1), data-animation!=item.animation)
                 .tour__elem--text!=item.text
                 .tour__elem--number.tour__elem--number-right.hidden-sm-down!=item.number
           .col-24.hidden-md-up

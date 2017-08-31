@@ -660,15 +660,22 @@ a
     border-radius: 40px 
 +r(760)
   .tour
+    .row
+      overflow: hidden
+    &__row
+      padding-top: 70px    
     &__heading
-      margin-bottom: 60px 
+      margin-bottom: 0
+    &__title
+      transform: translate3d(1000px, 0, 0)   
     &__box
       padding: 40px 20px
       margin: 0
     &__text
       text-align: left 
     &__item
-      margin-bottom: 45px    
+      margin-bottom: 45px  
+      transform: translate3d(1000px, 0, 0)  
     &__elem
       position: relative
       margin: 0 0 20px
@@ -676,10 +683,12 @@ a
         margin-right: -15px
         border-radius: 0px 40px 40px 0px
         padding: 10px 50px 10px 25px
+        transform: translate3d(1000px, 0, 0) 
       &--right
         margin-left: -15px  
         border-radius: 40px 0 0 40px
         padding: 10px 25px 10px 50px
+        transform: translate3d(1000px, 0, 0)
       &--text   
         font: 400 18px/27px $font-gotham
         text-align: left
@@ -700,6 +709,87 @@ a
       padding-right: 30px    
     &__tooltip
       padding: 10px 70px 
+  @keyframes bounceInUp1 
+    from, 60%, 75%, 90%, to 
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+    from 
+      opacity: 0
+      transform: translate3d(0, 3000px, 0)
+    60% 
+      opacity: 1
+      transform: translate3d(0, -20px, 0)
+    75% 
+      transform: translate3d(0, 10px, 0)
+    90% 
+      transform: translate3d(0, -5px, 0)
+    to 
+      transform: translate3d(0, 0, 0)
+  .bounceInUp1
+    animation-name: bounceInUp1  
+    animation-duration: 2s
+    animation-fill-mode: forwards  
+  .bounceInUp2
+    animation-name: bounceInUp1 
+    animation-duration: 2s
+    animation-fill-mode: forwards
+    animation-delay: 1s
+  @keyframes tourFadeInRight
+    from 
+      opacity: 0
+      transform: translate3d(2000px, 0, 0)
+    to 
+      opacity: 1
+      transform: none
+  @keyframes tourFadeInLeft
+    from 
+      opacity: 0
+      transform: translate3d(-2000px, 0, 0)
+    to 
+      opacity: 1
+      transform: none 
+  .tourTitleFadeInLeft
+    animation-name: tourFadeInLeft
+    animation-duration: 1.5s
+    animation-fill-mode: forwards
+  .tourTitleFadeInRight
+    animation-name: tourFadeInRight
+    animation-duration: 1.5s
+    animation-fill-mode: forwards    
+  .tourFadeInRight1 
+    animation-name: tourFadeInRight
+    animation-duration: 1.5s
+    animation-fill-mode: forwards
+    animation-delay: .5s
+  .tourFadeInRight2
+    animation-name: tourFadeInRight
+    animation-duration: 1.5s
+    animation-fill-mode: forwards
+    animation-delay: 1s
+  .tourFadeInRight3
+    animation-name: tourFadeInRight
+    animation-duration: 1.5s
+    animation-fill-mode: forwards 
+    animation-delay: 1.5s  
+  .tourFadeInRight4
+    animation-name: tourFadeInRight
+    animation-duration: 1.5s
+    animation-fill-mode: forwards 
+    animation-delay: 2s   
+  .tourFadeInLeft1 
+    animation-name: tourFadeInLeft
+    animation-duration: 1.5s
+    animation-fill-mode: forwards
+    animation-delay: .5s
+  .tourFadeInLeft2
+    animation-name: tourFadeInLeft
+    animation-duration: 1.5s
+    animation-fill-mode: forwards
+    animation-delay: 1s
+  .tourFadeInLeft3
+    animation-name: tourFadeInLeft
+    animation-duration: 1.5s
+    animation-fill-mode: forwards 
+    animation-delay: 1.5s            
 +r(960)
   .tour
     &__text                   
