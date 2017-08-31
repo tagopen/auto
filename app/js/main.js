@@ -37,7 +37,41 @@
       target: null,
       remove: false
     });
+
+    $('.tour__box').matchHeight({
+      byRow: true,
+      property: 'height',
+      target: null,
+      remove: false
+    });
+
+    $('.tour__elem--1').matchHeight({
+      byRow: true,
+      property: 'height',
+      target: null,
+      remove: false
+    });
+
+    $('.tour__elem--2').matchHeight({
+      byRow: true,
+      property: 'height',
+      target: null,
+      remove: false
+    });
+    
   }
+
+  if( ($( window ).width() >= 760) && ($( window ).width() < 1200) ) {
+
+    $('.tour__elem--3').matchHeight({
+      byRow: true,
+      property: 'height',
+      target: null,
+      remove: false
+    });
+
+  }
+
 
   // number day in week
   $(function() {

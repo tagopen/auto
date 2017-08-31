@@ -242,7 +242,7 @@ gulp.task('test', () => {
 });
 
 gulp.task('watch', ['browser-sync', 'fonts', 'sprite', 'scripts'], () => {
-  gulp.watch(path.watch.spritePng, ['sprite']);
+  gulp.watch('app/img/icons/**.*', ['sprite']);
   gulp.watch(path.watch.style, ['sass']);
   gulp.watch(path.watch.template, ['pug']);
   gulp.watch(path.watch.fonts, ['fonts']);

@@ -535,6 +535,7 @@ a
 +r(760)
   .detail
     padding-bottom: 70px
+    overflow: hidden
     &__heading
       padding-top: 90px
       margin-bottom: 60px
@@ -585,4 +586,193 @@ a
     &__subheading         
       font: 500 24px/36px $font-gotham
     &__text
+      font: 700 24px/36px $font-gotham
++comment("tour style")
+.tour
+  padding: 50px 0
+  &__heading
+    margin-bottom: 35px
+  &__box
+    position: relative
+    padding: 40px 15px
+    margin: 0 -15px
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      width: 100%
+      background-color: rgba(0,0,0,.75)
+    &--1
+      background: url(../img/tour1bg.jpg) no-repeat
+      background-size: cover
+      background-position: center
+      margin-bottom: 60px
+    &--2   
+      background: url(../img/tour2bg.jpg) no-repeat
+      background-size: cover
+      background-position: center 
+      margin-bottom: 35px
+  &__text
+    position: relative
+    font: 500 18px/27px $font-gotham
+    text-align: center
+    color: #fff  
+    z-index: 25
+  &__number
+    display: inline-block
+    position: absolute
+    top: -35px
+    height: 70px
+    width: 70px
+    border-radius: 50%
+    background-color: #ffb71d
+    text-align: center
+    font: 500 24px/46px $font-gotham
+    color: $color-dark 
+  &__title
+    font: 700 26px/30px $font-gotham
+    color: $color-dark
+    margin-bottom: 25px
+    text-align: center 
+  &__elem
+    padding: 10px 20px 
+    margin: 0 -15px 10px
+    &--left
+      background-color: #ededed
+    &--right
+      background-color: #f8f8f8  
+    &--text
+      font: 400 16px/24px $font-gotham
+      color: $color-dark
+      text-align: center
+  &__image
+    margin-top: 15px
+  &__tooltip
+    font: 700 22px/33px $font-gotham   
+    color: $color-dark
+    text-align: center
+    background-color: #ffb71d
+    padding: 10px 
+    margin: 30px -15px 0
+    border-radius: 40px 
++r(760)
+  .tour
+    &__heading
+      margin-bottom: 60px 
+    &__box
+      padding: 40px 20px
+      margin: 0
+    &__text
+      text-align: left 
+    &__item
+      margin-bottom: 45px    
+    &__elem
+      position: relative
+      margin: 0 0 20px
+      &--left
+        margin-right: -15px
+        border-radius: 0px 40px 40px 0px
+        padding: 10px 50px 10px 25px
+      &--right
+        margin-left: -15px  
+        border-radius: 40px 0 0 40px
+        padding: 10px 25px 10px 50px
+      &--text   
+        font: 400 18px/27px $font-gotham
+        text-align: left
+      &--number
+        position: absolute
+        left: -35px
+        top: 50%
+        margin-top: -35px
+        display: inline-block
+        height: 70px
+        width: 70px
+        border-radius: 50%
+        background-color: #ffb71d
+        text-align: center
+        font: 500 24px/68px $font-gotham
+        color: $color-dark  
+    &__image
+      padding-right: 30px    
+    &__tooltip
+      padding: 10px 70px 
++r(960)
+  .tour
+    &__text                   
+      font: 500 20px/30px $font-gotham
+    &__box
+      padding: 70px 
++r(1200)
+  .tour
+    &__box
+      overflow: hidden
+      &--1
+        padding: 75px 190px 75px 45px
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          left: -9%
+          top: -20%
+          height: 140%
+          width: 82%
+          background-color: rgba(0,0,0,.75)
+          transform: rotate(15deg) 
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          height: 120%
+          width: 34%
+          right: -9%
+          top: -10%
+          background-color: rgba(255, 183, 29, .5) 
+          transform: rotate(15deg) 
+      &--2
+        padding: 75px 45px 75px 190px
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          left: auto
+          right: -9%
+          top: -20%
+          height: 140%
+          width: 82%
+          background-color: rgba(0,0,0,.75)
+          transform: rotate(-15deg)           
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          height: 120%
+          width: 34%
+          left: -9%
+          top: -10%
+          background-color: rgba(255, 183, 29, .5) 
+          transform: rotate(-15deg) 
+    &__elem
+      &--left
+        padding: 10px 20px 10px 85px 
+        border-radius: 40px 0 0 40px
+        margin: 0 0 20px 20px
+      &--right
+        padding: 10px 85px 10px 20px 
+        border-radius: 0 40px 40px 0
+        margin: 0 20px 20px 0
+      &--number
+        &-left
+          left: -20px
+        &-right
+          right: -20px
+          left: auto
+    &__image
+      padding: 0
+      margin-top: 30px
+    &__tooltip
       font: 700 24px/36px $font-gotham  
+      padding: 15px 70px                
