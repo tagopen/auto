@@ -1169,6 +1169,11 @@ a:hover, a:focus {
   margin-bottom: 35px;
 }
 
+.tour__item {
+  -webkit-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
 .tour__box {
   position: relative;
   padding: 40px 15px;
@@ -1264,11 +1269,15 @@ a:hover, a:focus {
 }
 
 @media only screen and (min-width: 760px) {
+  .tour {
+    overflow: hidden;
+  }
   .tour .row {
     overflow: hidden;
   }
   .tour__row {
     padding-top: 70px;
+    overflow: visible !important;
   }
   .tour__heading {
     margin-bottom: 0;
