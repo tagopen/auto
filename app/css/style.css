@@ -1134,8 +1134,14 @@ a:hover, a:focus {
   .detail__flag {
     text-align: center;
   }
-  .detail__flag .ic--flag {
+  .detail__flag .ic--flagcolor {
     display: none;
+  }
+  .detail__flag--active .ic--flag {
+    display: none;
+  }
+  .detail__flag--active .ic--flagcolor {
+    display: inline-block;
   }
 }
 

@@ -39,15 +39,18 @@
     });
   }
 
+  // number day in week
   $(function() {
-    var $items = $('.item'),
-    active = "item--active",
+    var $items = $('.detail__flag'),
+    active = "detail__flag--active",
+    $info  = $('.detail__info--number'),
     date = new Date(),
     today = date.getDay() || 7;
 
     $items.removeClass(active)
           .slice(0, today)
           .addClass(active);
+    $info.text(today);
  });
   
 })(jQuery); // End of use strict

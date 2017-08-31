@@ -569,8 +569,15 @@ a
     &__flag
       text-align: center
       .ic
-        &--flag
-          display: none      
+        &--flagcolor
+          display: none  
+      &--active
+        .ic
+          &--flag
+            display: none
+          &--flagcolor
+            display: inline-block  
+
 +r(992)
   .detail 
     &__heading
