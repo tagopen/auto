@@ -47,18 +47,34 @@ a
 .main
   flex: 1
 .button
-  padding: 18px 15px 17px
+  position: relative
+  padding: 17px 15px 16px
   text-align: center
-  background-color: #ffbe11
-  background-image: linear-gradient(to top, #b67f00 0%, #e08212 100%)
   text-shadow: 0.5px 0.9px 2px rgba(255, 255, 255, 0.35)
   color: #1b1b1b
   font: 700 14px/16px $font-gotham
+  background: #ffbe11 url(../img/buttonbg.png) no-repeat
+  background-size: cover  
   text-transform: uppercase
   border: 0
   cursor: pointer
   border-radius: 5px
   letter-spacing: 1px
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 5px
+    width: 100%
+    box-shadow: 0px 5px 0px 0px rgba(167,126,19,1)
+    border-radius: 0 0 20px 20px 
+  &:active  
+    top: 2px
+    outline: none
+    &:before
+      box-shadow: 0px 3px 0px 0px rgba(167,126,19,1)      
   &--size
     width: 100%
 .form
@@ -897,6 +913,8 @@ a
 +comment("comment style")
 .comment
   padding: 50px 0 
+  &__col
+    margin-bottom: 20px
   &__heading
     margin-bottom: 30px
   &__box
@@ -949,6 +967,8 @@ a
       font-size: 20px
 +r(760)
   .comment
+    &__col
+      margin-bottom: 30px
     &__box
       position: relative
       padding: 40px 0 33px
@@ -980,3 +1000,192 @@ a
   .comment
     &__info
       padding: 15px
++comment("work style")
+.work
+  overflow: hidden
+  padding: 50px 0
+  background: url(../img/workbg.jpg) no-repeat
+  background-size: cover
+  background-attachment: fixed
+  &__heading
+    margin-bottom: 30px
+  &__image
+    margin-bottom: 20px
+    img
+      max-width: 100%  
+  &__text
+    position: relative
+    font: 500 20px/30px $font-gotham
+    color: #fff
+    margin-bottom: 35px
+    text-align: center 
+    &:before
+      content: ''
+      display: inline-block
+      height: 5px
+      width: 30px
+      position: absolute
+      left: 50%
+      margin-left: -15px
+      top: -10px
+      background-color: #ffb71d
++r(760)
+  .work
+    &__heading
+      margin-bottom: 50px 
+    &__box
+      padding-left: 65px
+    &__text
+      margin-bottom: 20px
+      text-align: left
+      &:before
+        left: -50px
+        top: 50%
+        margin-top: -2px
+        margin-left: 0
+  @keyframes workFadeInRight
+    from 
+      opacity: 0
+      transform: translate3d(2000px, 0, 0)
+    to 
+      opacity: 1
+      transform: none
+  @keyframes workZoomInUp 
+    from 
+      opacity: 0
+      transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0)
+      animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)
+    60% 
+      opacity: 1
+      transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0)
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)  
+  .workFadeInRight
+    animation-name: workFadeInRight
+    animation-duration: 1.5s
+    animation-fill-mode: forwards
+  .workZoomInUp
+    animation-name: workZoomInUp
+    animation-duration: 1.5s
+    animation-fill-mode: forwards          
++r(1200)
+  .work
+    &__image
+      position: relative
+      height: 100%
+      img
+        max-width: none
+        position: absolute
+        top: 0
+        right: 0
+    &__text
+      font: 500 24px/36px $font-gotham 
+      margin-bottom: 40px                 
++comment("map style")   
+.map  
+  overflow: hidden
+  &__box
+    padding: 30px 15px
+    margin: 0 -15px
+    background-color: #ffb71d
+  &__icon
+    margin: 0 auto 15px  
+  &__text
+    font: 700 20px/30px $font-gotham
+    color: $color-dark
+    text-align: center
+    margin-bottom: 25px
+  &__triangle
+    position: absolute
+    left: 50%
+    top: 100%
+    width: 0px
+    height: 0px
+    margin-left: -20px
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+    border-top: 20px solid #ffb71d
+    z-index: 25  
+#map
+  height: 250px
+  width: 100%    
++r(760)
+  .map
+    overflow: hidden
+    position: relative
+    &__icon
+      display: inline-block
+      margin-bottom: 35px
+    &__box
+      height: 500px
+      position: relative
+      padding: 0 45px 
+      margin: 0
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        height: 100%
+        width: 2000px
+        top: 0
+        left: -15px
+        background-color: #ffb71d
+    &__triangle
+      position: absolute
+      left: -55px
+      top: 50%
+      margin-top: -40px
+      width: 0px
+      height: 0px
+      border-top: 40px solid transparent
+      border-bottom: 40px solid transparent
+      border-right: 40px solid #ffb71d
+      z-index: 25
+    &__text
+      font: 700 24px/36px $font-gotham
+      text-align: left  
+      margin-bottom: 35px
+  #map
+    position: absolute
+    height: 100%
+    width: 50%
+    left: 0
+    top: 0     
++r(1200)
+  .map
+    &__box
+      padding: 0 100px 0 90px
++comment("footer style")
+.footer
+  padding: 30px 0 20px
+  background: url(../img/footerbg.jpg) no-repeat
+  background-size: cover
+  &__text
+    font: 400 12px/14px $font-gotham
+    color: #fff
+    margin-bottom: 15px
+  &__creater
+    margin: 0 auto 15px 
+  &__numbers
+    position: relative
+    display: inline-block
+    .ic--phone
+      position: absolute
+      left: -30px
+      top: 50%
+      margin-top: -22px
+  &__link
+    display: inline-block
+    font: 700 18px/27px $font-gotham
+    color: #ffb71d
+    margin-bottom: 10px
+    &:hover,
+    &:focus
+      color: #fff  
++r(760)
+  .footer
+    &__text
+      display: inline-block
+      font: 400 14px/21px $font-gotham
+      margin: 0    
+    .ic--well
+      margin-left: 20px

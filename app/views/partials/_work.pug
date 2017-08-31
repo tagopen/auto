@@ -1,0 +1,14 @@
+section.work
+  .container
+    .row.justify-content-center
+      .col-24.col-md-20.col-lg-16
+        h2.heading.heading--white.work__heading!=content.index.work.heading
+    .row.justify-content-center
+      .col-24.col-md-20.col-lg-10
+        .work__image
+          img.animate(data-animation!=content.index.work.img.animation, src!=content.index.work.img.src, alt!=content.index.work.img.alt)
+      .col-24.col-md-20.col-lg-14
+        .work__box
+          each item, i in content.index.work.points
+            .work__item.animate(data-animation!=item.animation)
+              .work__text!=item.text    

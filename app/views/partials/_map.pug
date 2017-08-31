@@ -1,0 +1,31 @@
+section.map
+  .container
+    .row.justify-content-end
+      .col-24.col-md-12
+        .map__box.d-flex.align-items-center
+          .row
+            .col-24.col-md-5.col-lg-3.d-flex.align-items-center
+              .map__icon
+                i.ic.ic--map
+            .col-24.col-md-19.col-lg-21.d-flex.align-items-center
+              .map__text!=content.index.map.text
+            .col-24  
+              button.button.button--size.map__btn!=content.index.map.btn
+            .map__triangle  
+  #map
+    script.
+      function initMap() {
+        var uluru = {lat: 50.6156207, lng: 26.2645903};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          mapTypeControl: false,
+          scrollwheel: false,
+          streetViewControl: false,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDMiE1FSNLDqeWHjoHH6cZBlhl6NITkw2w&callback=initMap')                                

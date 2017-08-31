@@ -357,7 +357,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-24">
+          <div class="col-24 comment__col">
             <div class="comment__box">
               <div class="row">
                 <div class="col-24 col-md-10 col-lg-8 col-xl-7 d-flex align-items-center">
@@ -377,7 +377,7 @@
               </div>
             </div>
           </div>
-          <div class="col-24">
+          <div class="col-24 comment__col">
             <div class="comment__box">
               <div class="row">
                 <div class="col-24 col-md-10 col-lg-8 col-xl-7 d-flex align-items-center">
@@ -397,7 +397,7 @@
               </div>
             </div>
           </div>
-          <div class="col-24">
+          <div class="col-24 comment__col">
             <div class="comment__box">
               <div class="row">
                 <div class="col-24 col-md-10 col-lg-8 col-xl-7 d-flex align-items-center">
@@ -420,9 +420,96 @@
         </div>
       </div>
     </section>
+    <section class="work">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-24 col-md-20 col-lg-16">
+            <h2 class="heading heading--white work__heading">Компания Rolidas работает с 2012 года</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-24 col-md-20 col-lg-10">
+            <div class="work__image"><img class="animate" data-animation="workZoomInUp" src="img/work.png" alt="Авто"></div>
+          </div>
+          <div class="col-24 col-md-20 col-lg-14">
+            <div class="work__box">
+              <div class="work__item animate" data-animation="workFadeInRight">
+                <div class="work__text">За 5 лет доставили более 2000 машин из Европы</div>
+              </div>
+              <div class="work__item animate" data-animation="workFadeInRight">
+                <div class="work__text">Являемся экспертами в области таможни, подборе автомобилей и их доставки на территорию Украины</div>
+              </div>
+              <div class="work__item animate" data-animation="workFadeInRight">
+                <div class="work__text">Оказываем техническую и юридическую поддержку в течении всего срока эксплуатации авто</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map">
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-24 col-md-12">
+            <div class="map__box d-flex align-items-center">
+              <div class="row">
+                <div class="col-24 col-md-5 col-lg-3 d-flex align-items-center">
+                  <div class="map__icon"><i class="ic ic--map"></i></div>
+                </div>
+                <div class="col-24 col-md-19 col-lg-21 d-flex align-items-center">
+                  <div class="map__text">г. Ровно, ул. Княгини Ольги 5, офис 308</div>
+                </div>
+                <div class="col-24"> 
+                  <button class="button button--size map__btn">Хотите мы вам перезвоним?</button>
+                </div>
+                <div class="map__triangle"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="map">
+        <script>
+          function initMap() {
+            var uluru = {lat: 50.6156207, lng: 26.2645903};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 17,
+              mapTypeControl: false,
+              scrollwheel: false,
+              streetViewControl: false,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
+      </div>
+      <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMiE1FSNLDqeWHjoHH6cZBlhl6NITkw2w&amp;callback=initMap">                               </script>
+    </section>
     <main class="main">
     </main>
-    <div class="footer"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-14 col-md-7 col-lg-5 d-flex align-items-center text-center text-md-left">
+            <div class="footer__text">Помогаем приобрести автомобиль из Европы</div>
+          </div>
+          <div class="col-18 col-md-6 col-lg-8 text-center flex-md-last">
+            <div class="footer__numbers"><i class="ic ic--phone"></i>
+              <div class="footer__number"><a class="footer__link" href="tel:0912344567">091 234 45 67</a></div>
+              <div class="footer__number"><a class="footer__link" href="tel:0912344567">091 234 45 67</a></div>
+            </div>
+          </div>
+          <div class="col-16 col-md-11 col-lg-11 d-flex align-items-center">
+            <div class="footer__creater text-center">
+              <div class="footer__text">Сделано с душой студией</div><i class="ic ic--well">       </i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- build:js js/bundle.min.js-->
     <!-- Tether JavaScript-->
     <script src="js/tether.js"></script>
