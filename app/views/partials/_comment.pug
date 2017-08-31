@@ -1,0 +1,22 @@
+section.comment
+  .container
+    .row.justify-content-center
+      .col-24.col-md-18
+        h2.heading.comment__heading!=content.index.comment.heading
+    .row
+      each item, i in content.index.comment.items
+        .col-24
+          .comment__box
+            .row
+              .col-24.col-md-10.col-lg-8.col-xl-7.d-flex.align-items-center
+                .comment__img
+                  img.img-fluid(src!=item.img.src, alt!=item.img.alt)
+              .col-24.col-md-14.col-lg-15
+                .comment__info
+                  .comment__author!=item.author
+                  .comment__product!=item.product  
+                  .comment__text!=item.text 
+                  .comment__button   
+                    .comment__play
+                      i.fa.fa-play(aria-hidden="true")
+                    .comment__button--text!=item.btn.text        
