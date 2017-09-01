@@ -48,9 +48,49 @@
     today = date.getDay() || 7;
 
     $items.removeClass(active)
-          .slice(0, today)
-          .addClass(active);
+    .slice(0, today)
+    .addClass(active);
     $info.text(today);
- });
+  });
+
+  //popup  reviews
+  $(function () {
+
+    $('<audio id="audio1"><source src="sieg-heil.mp3" type="audio/mpeg"></audio>').appendTo('body');
+    $('<audio id="audio2"><source src="boom_9.mp3" type="audio/mpeg"></audio>').appendTo('body');
+    $('<audio id="audio3"><source src="shutup.swf.mp3" type="audio/mpeg"></audio>').appendTo('body');
+    $('<audio id="audio4"><source src="x-files-theme-song-copy.mp3" type="audio/mpeg"></audio>').appendTo('body');
+
+    var $dateText = $('.heading__text--client'),
+    today = new Date(),
+    period = 24 * 60 * 60 * 1000, // 24 hours
+    nextDate = new Date(today.getTime() + period),
+    $popup = $('.item'),
+    $popupItem = $popup.find('.items');
+
+    if (!$.cookie('review') || !localStorage.getItem('review')) {
+      // time interval
+      var start = Date.now(),
+      interval = 20 * 1000, //every 30 sec
+      popupItemPostion = 0;
+
+      var theInterval = setInterval(function () {
+        if (Date.now() - start > interval * $popupItem.length) {
+          clearInterval(theInterval);
+          return;
+        }
+
+        console.log('here');
+        $('#audio' + (popupItemPostion + 1))[0].play();
+
+        $popupItem.eq(popupItemPostion).fadeIn( "slow" ); 
+        popupItemPostion ++;
+      }, interval);
+
+      localStorage.setItem('review', nextDate );
+      $.cookie('review', 1, { expires: nextDate });
+    }
+
+  });
   
 })(jQuery); // End of use strict
