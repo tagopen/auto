@@ -39,7 +39,7 @@ const path = {
     html:           dirs.src + '/*.html',
     js:             dirs.src + '/js/**/*.js',
     style:          dirs.src + '/sass/**/*.+(scss|sass)',
-    template:       dirs.src + '/views/**/*.pug',
+    template:       dirs.src + '/views/**/*',
     pug:            dirs.src + '/views/*.pug',
     img:            dirs.src + '/img/**/*.*',
     spritePng:      dirs.src + '/img/icons/**/*.png',

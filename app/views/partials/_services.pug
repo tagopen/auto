@@ -1,0 +1,18 @@
+section.service
+  .container
+    .row.justify-content-center
+      .col-24
+        h2.heading.service__heading!=content.index.service.heading
+      .col-24.col-md-20.col-lg-24
+        h3.service__subheading!=content.index.service.subheading  
+    .row
+      .col-24.col-md-8.col-lg-11.flex-md-last.d-flex.align-items-center
+        .service__image
+          img.animate(data-animation!=content.index.service.img.animation, src!=content.index.service.img.src, alt!=content.index.service.img.alt)
+      .col-24.col-md-16.col-lg-12.offset-lg-1
+        .service__box
+          each item, i in content.index.service.points
+            .service__item.animate(data-animation!=item.animation)
+              .service__text
+                i.fa.fa-chevron-right(aria-hidden="true")
+                !=item.text       

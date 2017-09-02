@@ -34,12 +34,51 @@ a
 .modal
   -webkit-overflow-scrolling: touch
   transform: translateZ(0)
+  &__content
+    position: relative
+    background-color: #f8f8f8
+    border: 10px solid #ffb71d
+    padding: 35px 15px
+    text-align: center
+    &--red
+      border: 10px solid #ad212a
+    .ic--katalog1
+      position: absolute
+      left: -120px
+      top: 33%
+    .ic--katalog2
+      position: absolute
+      right: -60px
+      top: 33%  
+  &__close
+    position: absolute
+    right: 5px
+    top: 5px
+    opacity: 1
+    &:hover,
+    &:focus
+      fill: #ffb71d
+  &__title
+    font: 700 24px/27px $font-gotham 
+    color: $color-dark
+    margin-bottom: 30px  
+  &__heading
+    font: 500 18px/27px $font-gotham
+    color: $color-dark
+    margin-bottom: 30px 
 .modal.show 
   display: flex !important
   align-items: center
 .modal-dialog
   position: relative
   margin: auto
++r(760)
+  .modal
+    &__content
+      padding: 50px 20px
+    &--big  
+      max-width: none
+      width: 560px 
 .body
   display: flex
   flex-direction: column
@@ -58,7 +97,7 @@ a
   text-transform: uppercase
   border: 0
   cursor: pointer
-  border-radius: 5px
+  border-radius: 5px 5px 0 0
   letter-spacing: 1px
   &:before
     content: ''
@@ -89,13 +128,184 @@ a
 +comment("home page style")
 .heading
   font: 900 30px/32px $font-gotham
-  color: $color-dark
+  color: $color-dark 
   text-align: center
   &--white
     color: #fff
 +r(992)
   .heading  
     font: 900 36px/42px $font-gotham
++comment("notify style")
+.notify
+  position: fixed
+  display: none
+  width: 
+  max-height: 100vh
+  overflow-y: auto
+  overflow-x: hidden
+  left: 15px
+  bottom: 0
+  padding: 4px 50px 4px 23px
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3)
+  border-radius: 9px 10px 10px 9px
+  background-color: #666666
+  z-index: 999
+  &__close
+    position: absolute
+    top: 15px
+    right: 15px
+    border-radius: 1px
+    background-color: rgba(0,0,0,0.6)
+  &__item
+    display: none
+  &__box
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin: 26px 0
+  &__icon
+    color: #666666
+  &__photo
+    width: 60px
+    height: 60px
+    flex: 1 0 auto
+    margin-right: 15px
+    border-radius: 50%
+    overflow: hidden
+  &__text
+    color: #ffffff    
++comment("navbar style") 
++rx(767)
+  .nav
+    &__container
+      width: 100%
+.nav
+  &__link
+    font: 400 14px/16px $font-gotham
+    color: $color-dark !important
+    &.active
+      color: #ffb71d !important
+  &__contact
+    position: relative
+    text-align: right
+    &--text
+      display: inline-block
+      font: 500 14px/16px $font-gotham 
+      color: #ffb71d 
+  &__btn
+    .ic--phone
+      position: absolute
+      left: -5px
+      top: 50%
+      margin-top: -16px   
+.navbar
+  position: fixed
+  top: 0
+  width: 100%
+  min-height: 76px
+  z-index: 100
+  &-toggler
+    cursor: pointer
+  &--shrink
+    background-color: white
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2)
+.logo
+  &__text
+    font: 400 12px/21px $font-gotham   
++r(760)
+  .navbar
+    &-collapse
+      display: flex !important 
+    &__row
+      width: 100% 
+  .nav
+    &__link
+      padding-right: 0.3rem !important 
+      padding-left: 0.3rem !important 
+    &__btn
+      .ic--phone
+        position: static
+        margin: 0 10px 0 0      
++r(992)
+  .logo
+    &__text
+      font: 400 13px/21px $font-gotham
+  .nav
+    &__contact
+      &--text
+        border-bottom: 1px dashed #ffb71d
+    &__link    
+      font: 400 12px/16px $font-gotham 
++r(1200)
+  .logo
+    &__text
+      font: 400 14px/21px $font-gotham
+  .nav
+    &__link
+      font: 400 14px/16px $font-gotham      
++comment("header style")
+.header
+  padding: 110px 0 70px
+  background: url(../img/headerbg.jpg) no-repeat
+  background-size: cover
+  background-position: center 
+  min-height: 400px
+  &__title
+    font: 900 30px/45px $font-gotham 
+    color: $color-dark
+    margin-bottom: 10px
+    text-align: center
+  &__subtitle
+    font: 500 18px/27px $font-gotham 
+    color: $color-dark
+    margin-bottom: 20px 
+    text-align: center
+    &--span
+      font: 900 18px/27px $font-gotham 
+  &__text
+    font: 500 16px/24px $font-gotham 
+    color: $color-dark  
+    text-align: center
+    background-color: #ffb71d
+    padding: 10px 15px
+    margin-bottom: 15px
+  &__form
+    background-color: white
+    border: 15px solid #ffbe33  
+    padding: 20px 15px
++r(760)
+  .header
+    padding: 100px 0 0 0
+    min-height: 100vh    
+    &__container
+      height: 100%
+    &__row
+      height: 100%   
+    &__title
+      font: 900 40px/60px $font-gotham
+      margin-bottom: 30px  
+    &__subtitle
+      font: 500 24px/36px $font-gotham
+      margin-bottom: 35px
+      &--span
+        font: 900 24px/36px $font-gotham
+        &-color
+          background: #ffbe33 
+    &__text
+      font: 500 20px/30px $font-gotham 
+    &__form
+      padding: 30px   
++r(992)
+  .header
+    padding: 0
+    &__title
+      text-align: left
+    &__subtitle
+      text-align: left
+    &__text
+      text-align: left 
+    &__form
+      padding: 40px 30px                  
 +comment("intro style")    
 .intro
   padding: 80px 0
@@ -1000,6 +1210,211 @@ a
   .comment
     &__info
       padding: 15px
++comment("delivery style")
+.delivery
+  padding: 50px 0
+  background-color: #fafafa
+  background-image: linear-gradient(to top, white 0%, #f2f2f2 100%)
+  overflow: hidden
+  &__heading
+    margin-bottom: 30px
+  &__subheading
+    font: 700 20px/30px $font-gotham
+    color: $color-dark
+    text-align: center
+  &__image
+    height: 500px
+    position: relative
+  &__circle
+    position: absolute
+    top: 0
+    left: -250px
+  &__car
+    position: absolute
+    top: 50%
+    right: 0
+    margin-top: -132px
+    margin-left: -278px
+  &__box
+    padding-top: 30px  
+  &__text
+    position: relative
+    font: 400 18px/27px $font-gotham
+    color: $color-dark
+    text-align: center
+    margin-bottom: 50px 
+    .ic
+      position: absolute
+      top: -35px
+      left: 50%
+      margin-left: -15px
+  &__detail    
+    border: 15px solid #ffb71d
+    box-shadow: 15px 26px 60px rgba(0, 0, 0, 0.2) 
+    margin: 0 -15px
+    padding: 0 10px
+  &__form
+    padding: 40px 0 
+  &__title
+    font: 700 22px/33px $font-gotham 
+    color: $color-dark
+    text-align: center
+    margin-bottom: 30px 
++r(480)
+  .delivery
+    &__circle
+      left: -125px    
+    &__detail
+      margin: 0
+      padding: 0    
++r(760)
+  .delivery
+    overflow: hidden
+    &__subheading
+      text-align: left  
+      margin-bottom: 30px
+    &__circle
+      left: 50%
+      margin-left: -245px
+    &__car
+      left: 50%
+      right: auto    
+    &__box
+      padding-left: 60px  
+    &__text
+      text-align: left  
+      .ic
+        top: 50%
+        margin: -15px 0 0 0
+        left: -50px 
+    &__form
+      padding: 50px 0 70px    
+    &__title
+      margin-bottom: 40px    
+  @keyframes deliveryZoomIn 
+    from 
+      opacity: 0
+      transform: scale3d(.3, .3, .3)
+    50% 
+      opacity: 1
+  @keyframes deliveryLeft
+    from 
+      opacity: 0
+      transform: translate3d(-2000px, 0, 0)
+    to 
+      opacity: 1
+      transform: none 
+  @keyframes deliveryFadeInRight
+    from 
+      opacity: 0
+      transform: translate3d(2000px, 0, 0)
+    to 
+      opacity: 1
+      transform: none     
+  .deliveryZoomIn 
+    animation-name: deliveryZoomIn 
+    animation-duration: 1.5s
+    animation-fill-mode: forwards
+  .deliveryLeft 
+    animation-name: deliveryLeft 
+    animation-duration: 1.5s
+    animation-fill-mode: forwards
+  .deliveryFadeInRight
+    animation-name: deliveryFadeInRight
+    animation-duration: 1.5s
+    animation-fill-mode: forwards             
++r(1200)
+  .delivery
+    &__subheading
+      font: 700 22px/33px $font-gotham  
+    &__detail
+      position: relative
+      overflow: hidden
+      border: 0
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        border: 15px solid #ffb71d
+    &__corner
+      position: absolute
+      top: -15px
+      right: -15px  
++comment("service style")
+.service
+  padding: 30px 0 40px 
+  &__heading
+    margin-bottom: 20px
+  &__subheading   
+    font: 500 20px/30px $font-gotham
+    color: $color-dark
+    text-align: center
+    margin-bottom: 30px
+  &__image
+    margin-bottom: 35px
+    img
+      max-width: 100%  
+  &__item
+    margin-bottom: 30px
+  &__text
+    position: relative
+    font: 500 18px/27px $font-gotham
+    color: $color-dark
+    text-align: center   
+    .fa
+      position: absolute
+      top: -20px
+      left: 50%
+      margin-left: -7px
+      color: #ffb71d 
++r(760)
+  .service
+    padding-top: 30px
+    &__subheading
+      font: 500 22px/33px $font-gotham
+    &__box
+      padding-top: 30px  
+    &__text
+      text-align: left 
+      padding-left: 5px
+      .fa
+        top: 50%
+        left: -15px
+        margin: -9px 0 0 0 
+  @keyframes serviceFadeInLeft
+    from 
+      opacity: 0
+      transform: translate3d(-2000px, 0, 0)
+    to 
+      opacity: 1
+      transform: none
+  .serviceFadeInLeft
+    animation-name: serviceFadeInLeft
+    animation-duration: 1.5s
+    animation-fill-mode: forwards  
+  .serviceZoomInUp
+    animation-name: workZoomInUp
+    animation-duration: 1.5s
+    animation-fill-mode: forwards    
++r(1200)
+  .service
+    overflow: hidden
+    &__subheading
+      font: 500 26px/36px $font-gotham
+    &__image
+      img
+        position: absolute
+        top: 0
+        left: 0
+        max-width: none   
+    &__text
+      .fa
+        position: static
+        margin: 0 15px 0 0             
 +comment("work style")
 .work
   overflow: hidden

@@ -20,13 +20,21 @@ header.header
                   a.nav-link.nav__link(class={"nav-link--active": i === 0}, href=item.href)!= item.name
                     if (i === 0) 
   .container.header__container
-    .row.header__row.justify-content-xl-start.d-flex.align-items-stretch
-      .header__box.align-self-center
-        .col-24.col-md-18.offset-md-3.col-lg-16.offset-lg-0
-          h1.header__title!=content.index.header.title
-        .col-24.col-md-22.col-lg-14.offset-md-1.offset-lg-0
-          h2.header__subtitle!=content.index.header.subtitle
-        .col-24.col-md-18.col-lg-14.offset-md-3.offset-lg-0
-          .header__text!=content.index.header.text 
-        .col-24.col-md-14.col-lg-8.offset-md-5.offset-lg-0
-          button.button.button--size.header__btn(data-toggle="modal", data-target="#header__modal")!=content.index.header.btn.text   
+    .row.header__row.d-flex.align-items-lg-center
+      .col-24.col-lg-12
+        .row
+          .col-24
+            h1.header__title!=content.indexd.header.title
+          .col-24
+            h2.header__subtitle!=content.indexd.header.subtitle
+      .col-24.col-md-16.offset-md-4.col-lg-12.offset-lg-0
+        .header__form
+          .delivery__title!=content.indexd.header.form.title   
+          form.contact__form.contactForm(method='post', action='./mail/mail.php')
+            .row
+              .col-24.form-group.form__group 
+                input.form-control.form__input.form__phone(aria-invalid='false', placeholder="Введите ваше имя", name='name', type='text', required)
+              .col-24.form-group.form__group 
+                input.form-control.form__input.form__input--phone.form__phone(aria-invalid='false', placeholder="Введите ваш телефон", name='phone', type='tel', required)  
+              .col-24    
+                button.button.button--size.form__btn(name='form', value='динамика цен', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.indexd.header.form.btn 

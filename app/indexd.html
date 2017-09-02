@@ -52,41 +52,6 @@
 <![endif]-->
   </head>
   <body class="body">
-    <div class="notify">
-      <button class="close notify__close" type="button" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
-      <div class="notify__item">
-        <div class="notify__box">
-          <div class="notify__photo"><img class="img-responsive notify__img" src="img/notify1.jpg" alt="notify1"></div>
-          <div class="notify__content">
-            <p class="notify__text">Посетитель из Ровно оставил заявку на участие в туре</p>
-          </div>
-        </div>
-      </div>
-      <div class="notify__item">
-        <div class="notify__box">
-          <div class="notify__photo"><img class="img-responsive notify__img" src="img/notify2.jpg" alt="notify1"></div>
-          <div class="notify__content">
-            <p class="notify__text">Посетитель из Киева оставил заявку на консультацию</p>
-          </div>
-        </div>
-      </div>
-      <div class="notify__item">
-        <div class="notify__box">
-          <div class="notify__photo"><img class="img-responsive notify__img" src="img/notify1.jpg" alt="notify1"></div>
-          <div class="notify__content">
-            <p class="notify__text">Посетитель из Ровно оставил заявку на участие в туре</p>
-          </div>
-        </div>
-      </div>
-      <div class="notify__item">
-        <div class="notify__box">
-          <div class="notify__photo"><img class="img-responsive notify__img" src="img/notify2.jpg" alt="notify1"></div>
-          <div class="notify__content">
-            <p class="notify__text">Посетитель из Киева оставил заявку на консультацию</p>
-          </div>
-        </div>
-      </div>
-    </div>
     <header class="header">
       <nav class="navbar navbar-toggleable-sm navbar-light" id="mainNav">
         <div class="container nav__container">
@@ -116,19 +81,33 @@
         </div>
       </nav>
       <div class="container header__container">
-        <div class="row header__row justify-content-xl-start d-flex align-items-stretch">
-          <div class="header__box align-self-center">
-            <div class="col-24 col-md-18 offset-md-3 col-lg-16 offset-lg-0">
-              <h1 class="header__title">Организация туров по авторынкам Европы для покупки автомобиля</h1>
+        <div class="row header__row d-flex align-items-lg-center">
+          <div class="col-24 col-lg-12">
+            <div class="row">
+              <div class="col-24">
+                <h1 class="header__title">Организация туров по авторынкам Европы для покупки автомобиля</h1>
+              </div>
+              <div class="col-24">
+                <h2 class="header__subtitle">наши эксперты помогут выбрать качественный авто, а вы в свою очередь сэкономите <span class="header__subtitle--span header__subtitle--span-color ">до 1000 евро</span></h2>
+              </div>
             </div>
-            <div class="col-24 col-md-22 col-lg-14 offset-md-1 offset-lg-0">
-              <h2 class="header__subtitle">Наши эксперты помогут выбрать качественный авто, а вы в свою очередь сэкономите <span class="header__subtitle--span">до 1000 евро</span></h2>
-            </div>
-            <div class="col-24 col-md-18 col-lg-14 offset-md-3 offset-lg-0">
-              <div class="header__text">Узнайте за счет чего мы помогаем сэкономить до 1000 евро при покупке европейского авто. Бесплатная консультация!</div>
-            </div>
-            <div class="col-24 col-md-14 col-lg-8 offset-md-5 offset-lg-0">
-              <button class="button button--size header__btn" data-toggle="modal" data-target="#header__modal">Узнать об экономии</button>
+          </div>
+          <div class="col-24 col-md-16 offset-md-4 col-lg-12 offset-lg-0">
+            <div class="header__form">
+              <div class="delivery__title">Получите каталог автомобилей с ценами, которые мы помогли пригнать за последнее время</div>
+              <form class="contact__form contactForm" method="post" action="./mail/mail.php">
+                <div class="row">
+                  <div class="col-24 form-group form__group"> 
+                    <input class="form-control form__input form__phone" aria-invalid="false" placeholder="Введите ваше имя" name="name" type="text" required>
+                  </div>
+                  <div class="col-24 form-group form__group"> 
+                    <input class="form-control form__input form__input--phone form__phone" aria-invalid="false" placeholder="Введите ваш телефон" name="phone" type="tel" required>
+                  </div>
+                  <div class="col-24">   
+                    <button class="button button--size form__btn" name="form" value="динамика цен" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить каталог автомобилей</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

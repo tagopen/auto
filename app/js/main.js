@@ -21,6 +21,34 @@
     });
   });
 
+$(document).ready(function(){
+    $(".navbar-nav").on("click",".nav__link", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight() +1}, 1500);
+    });
+  });
+
+  $(function($) {
+    var currentMousePos = { x: -1, y: -1 },
+        prevMousePos    = {x: -1, y: -1},
+        documentTop     = $(document).scrollTop();
+
+    $(document).on('mousemove, mouseout', function(event) {
+      currentMousePos.x = event.pageX;
+      currentMousePos.y = event.pageY;
+      documentTop = $(document).scrollTop();
+        // ELSEWHERE, your code that needs to know the mouse position without an event
+        if ((currentMousePos.y < prevMousePos.y) && (currentMousePos.y < documentTop + 21)) {
+          $('#sibassa__modal').modal("show");
+          $(document).unbind('mousemove, mouseout');
+        }
+        prevMousePos.x = currentMousePos.x;
+        prevMousePos.y = currentMousePos.y;
+      });
+  });
+
   $(window).scroll(function (){ 
     $('.animate').each(function (){
      if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
@@ -28,6 +56,25 @@
     } 
   }); 
   }); 
+
+    // Activate scrollspy to add active class to navbar items on scroll
+    $('body').scrollspy({
+      target: '#mainNav',
+      offset: 30
+    });
+
+    // Closes responsive menu when a link is clicked
+    $('.navbar-collapse>ul>li>a').click(function() {
+      $('.navbar-collapse').collapse('hide');
+    });
+
+    $(window).scroll(function() {
+      if ($("#mainNav").offset().top > 30) {
+        $("#mainNav").addClass("navbar--shrink");
+      } else {
+        $("#mainNav").removeClass("navbar--shrink");
+      }
+    });
 
   if( $( window ).width() >= 760 ) {
 
@@ -112,31 +159,46 @@
     today = new Date(),
     period = 24 * 60 * 60 * 1000, // 24 hours
     nextDate = new Date(today.getTime() + period),
-    $popup = $('.item'),
-    $popupItem = $popup.find('.items');
+    $popup = $('.notify'),
+    $popupItem = $popup.find('.notify__item'),
+    $close     = $popup.find('.notify__close');
 
-    if (!$.cookie('review') || !localStorage.getItem('review')) {
+    // statement date over
+    if (!localStorage.getItem('review') || new Date(localStorage.getItem('review')) < today) {
       // time interval
       var start = Date.now(),
-      interval = 20 * 1000, //every 30 sec
-      popupItemPostion = 0;
+      interval = 10 * 1000, //every 20 sec
+      popupItemPosition = 0;
+      
 
       var theInterval = setInterval(function () {
+        // stop timer when time is out
         if (Date.now() - start > interval * $popupItem.length) {
           clearInterval(theInterval);
           return;
         }
 
-        console.log('here');
-        $('#audio' + (popupItemPostion + 1))[0].play();
+        // show popup
+        if(!$popup.is(":visible")) {
+          $popup.show();
+        }
 
-        $popupItem.eq(popupItemPostion).fadeIn( "slow" ); 
-        popupItemPostion ++;
+        // audio play
+        $('#audio' + (popupItemPosition + 1))[0].play();
+
+        // show item
+        $popupItem.eq(popupItemPosition).fadeIn( "slow" ); 
+        popupItemPosition ++;
       }, interval);
 
       localStorage.setItem('review', nextDate );
-      $.cookie('review', 1, { expires: nextDate });
     }
+    
+    // stop timer on close
+    $close.on('click', function() {
+      clearInterval(theInterval);
+      $popup.fadeOut('slow');
+    });
 
   });
   

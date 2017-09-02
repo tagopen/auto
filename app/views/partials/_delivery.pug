@@ -1,0 +1,34 @@
+section.delivery
+  .container
+    .row.justify-content-center
+      .col-24.col-md-20.col-lg-16
+        h2.heading.delivery__heading!=content.index.delivery.heading
+    .row    
+      .col-24.col-md-20.offset-md-2.col-lg-11.offset-lg-12
+        h3.delivery__subheading!=content.index.delivery.heading
+    .row    
+      .col-24.col-md-20.offset-md-2.col-lg-12.offset-lg-0
+        .delivery__image
+          img.delivery__circle.animate(data-animation!=content.index.delivery.imgcircle.animation, src!=content.index.delivery.imgcircle.src, alt!=content.index.delivery.imgcircle.alt)
+          img.delivery__car.animate(data-animation!=content.index.delivery.imgcar.animation, src!=content.index.delivery.imgcar.src, alt!=content.index.delivery.imgcar.alt)  
+      .col-24.col-lg-10  
+        .delivery__box
+          each item, i in content.index.delivery.points
+            .delivery__item.animate(data-animation!=item.animation)
+              .delivery__text!=item.text
+                i.ic.ic--check 
+    .row
+      .col-24
+        .delivery__detail
+          .delivery__corner.hidden-md-down
+            img(src!=content.index.delivery.corner.src, alt!=content.index.delivery.corner.alt)
+          .row
+            .col-24.col-md-18.offset-md-3.col-lg-10.offset-lg-2
+              .delivery__form
+                .delivery__title!=content.index.delivery.title   
+                form.contact__form.contactForm(method='post', action='./mail/mail.php')
+                  .row
+                    .col-24.form-group.form__group 
+                      input.form-control.form__input.form__input--phone.form__phone(aria-invalid='false', placeholder="Введите ваш телефон", name='phone', type='tel', required)
+                    .col-24    
+                      button.button.button--size.form__btn(name='form', value='динамика цен', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.index.delivery.btn              
