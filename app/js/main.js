@@ -21,16 +21,36 @@
     });
   });
 
+$(document).ready(function() {
+  $('.fancybox').fancybox();
+});
+
+if( ($( window ).width() >= 760) && ($( window ).width() < 992) ) {
+
+    $(document).ready(function(){
+    $(".navbar-nav").on("click",".nav__link", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+132}, 1500);
+    });
+  });
+
+};
+
+if( $( window ).width() > 992 ) {
 $(document).ready(function(){
     $(".navbar-nav").on("click",".nav__link", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
       top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight() +1}, 1500);
+      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+1}, 1500);
     });
   });
 
-  $(function($) {
+};
+
+/*  $(function($) {
     var currentMousePos = { x: -1, y: -1 },
         prevMousePos    = {x: -1, y: -1},
         documentTop     = $(document).scrollTop();
@@ -47,7 +67,7 @@ $(document).ready(function(){
         prevMousePos.x = currentMousePos.x;
         prevMousePos.y = currentMousePos.y;
       });
-  });
+  });*/
 
   $(window).scroll(function (){ 
     $('.animate').each(function (){
@@ -139,7 +159,7 @@ $(document).ready(function(){
     active = "detail__flag--active",
     $info  = $('.detail__info--number'),
     date = new Date(),
-    today = date.getDay() || 7;
+    today = date.getDay() || 6;
 
     $items.removeClass(active)
     .slice(0, today)
@@ -149,11 +169,6 @@ $(document).ready(function(){
 
   //popup  reviews
   $(function () {
-
-    $('<audio id="audio1"><source src="sieg-heil.mp3" type="audio/mpeg"></audio>').appendTo('body');
-    $('<audio id="audio2"><source src="boom_9.mp3" type="audio/mpeg"></audio>').appendTo('body');
-    $('<audio id="audio3"><source src="shutup.swf.mp3" type="audio/mpeg"></audio>').appendTo('body');
-    $('<audio id="audio4"><source src="x-files-theme-song-copy.mp3" type="audio/mpeg"></audio>').appendTo('body');
 
     var $dateText = $('.heading__text--client'),
     today = new Date(),
@@ -167,7 +182,7 @@ $(document).ready(function(){
     if (!localStorage.getItem('review') || new Date(localStorage.getItem('review')) < today) {
       // time interval
       var start = Date.now(),
-      interval = 10 * 1000, //every 20 sec
+      interval = 20 * 1000, //every 20 sec
       popupItemPosition = 0;
       
 
@@ -182,9 +197,6 @@ $(document).ready(function(){
         if(!$popup.is(":visible")) {
           $popup.show();
         }
-
-        // audio play
-        $('#audio' + (popupItemPosition + 1))[0].play();
 
         // show item
         $popupItem.eq(popupItemPosition).fadeIn( "slow" ); 
@@ -201,5 +213,61 @@ $(document).ready(function(){
     });
 
   });
+
+  $('#video__modal1').on('shown.bs.modal', function() {
+    $("#video__modal1 iframe").attr('src', 'https://www.youtube.com/embed/7kvsai5OriE?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+  })
+  $('#video__modal1').on('hidden.bs.modal', function() {
+    $("#video__modal1 iframe").attr('src', 'https://www.youtube.com/embed/7kvsai5OriE?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+  })
+
+  $('#video__modal2').on('shown.bs.modal', function() {
+    $("#video__modal2 iframe").attr('src', 'https://www.youtube.com/embed/W6c1EbSycd0?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+  })
+  $('#video__modal2').on('hidden.bs.modal', function() {
+    $("#video__modal2 iframe").attr('src', 'https://www.youtube.com/embed/W6c1EbSycd0?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+  })
+
+  $('#video__modal3').on('shown.bs.modal', function() {
+    $("#video__modal3 iframe").attr('src', 'https://www.youtube.com/embed/StM-iL6p2Fw?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+  })
+  $('#video__modal3').on('hidden.bs.modal', function() {
+    $("#video__modal3 iframe").attr('src', 'https://www.youtube.com/embed/StM-iL6p2Fw?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+  })
+
+  $('#video__modal4').on('shown.bs.modal', function() {
+    $("#video__modal4 iframe").attr('src', 'https://www.youtube.com/embed/ztVlgNm5czI?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+  })
+  $('#video__modal4').on('hidden.bs.modal', function() {
+    $("#video__modal4 iframe").attr('src', 'https://www.youtube.com/embed/ztVlgNm5czI?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+  })
+
+  $('#video__modal5').on('shown.bs.modal', function() {
+    $("#video__modal5 iframe").attr('src', 'https://www.youtube.com/embed/X-4ODWjLP40?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+  })
+  $('#video__modal5').on('hidden.bs.modal', function() {
+    $("#video__modal5 iframe").attr('src', 'https://www.youtube.com/embed/X-4ODWjLP40?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+  })
+
+  $('#video__modal6').on('shown.bs.modal', function() {
+    $("#video__modal6 iframe").attr('src', 'https://www.youtube.com/embed/20Ny_gE5HsA?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+  })
+  $('#video__modal6').on('hidden.bs.modal', function() {
+    $("#video__modal6 iframe").attr('src', 'https://www.youtube.com/embed/20Ny_gE5HsA?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+  })
+
+  $('#video__modal7').on('shown.bs.modal', function() {
+    $("#video__modal7 iframe").attr('src', 'https://www.youtube.com/embed/qlP5nWgiFpM?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+  })
+  $('#video__modal7').on('hidden.bs.modal', function() {
+    $("#video__modal7 iframe").attr('src', 'https://www.youtube.com/embed/qlP5nWgiFpM?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+  })
+
+  $('#video__modal8').on('shown.bs.modal', function() {
+    $("#video__modal8 iframe").attr('src', 'https://www.youtube.com/embed/g_mWAnNXHXc?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+  })
+  $('#video__modal8').on('hidden.bs.modal', function() {
+    $("#video__modal8 iframe").attr('src', 'https://www.youtube.com/embed/g_mWAnNXHXc?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+  })
   
 })(jQuery); // End of use strict
