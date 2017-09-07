@@ -1,17 +1,22 @@
 header.header
-  nav#mainNav.navbar.navbar-toggleable-sm.navbar-light
+  nav#mainNav.navbar.navbar-toggleable-md.navbar-light
     .container.nav__container
       .row.navbar__row.justify-content-between.justify-content-md-start.navbar__row.align-items-center
-        .col-10.col-sm-6.col-md-6.hidden-md-up
+        .col-10.col-sm-6.col-md-6.hidden-lg-up
           button.hidden-lg-up.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-icon
         .col-sm-10.col-md-6.col-lg-5.hidden-sm-down.flex-lg-first
           .logo__text!=content.site.nav.logo
-        .col-14.col-sm-8.col-md-18.col-lg-6.col-xl-5.flex-sm-last
+        .col-14.col-sm-8.col-md-12.col-lg-6.col-xl-5.flex-sm-last
           .nav__contact.ml-auto
             a.nav__btn(data-toggle="modal", href="#call__modal")
               i.ic.ic--phone
               .nav__contact--text!=content.site.nav.btn.text
+            .header__numbers
+              .header__number
+                a.footer__link(href='tel:0678000144') 067-800-0144
+              .header__number
+                a.footer__link(href='tel:0504078836') 050-407-8836
         .col.flex-md-last.flex-lg-first
           #navbarSupportedContent.collapse.navbar-collapse
             ul.navbar-nav.nav-fill.w-100
@@ -20,13 +25,23 @@ header.header
                   a.nav-link.nav__link(class={"nav-link--active": i === 0}, href=item.href)!= item.name
                     if (i === 0) 
   .container.header__container
-    .row.header__row.justify-content-xl-start.d-flex.align-items-stretch
+    .row.header__row.justify-content-xl-start.d-flex
       .header__box.align-self-center
         .col-24.col-md-18.offset-md-3.col-lg-16.offset-lg-0
           h1.header__title!=content.index.header.title
         .col-24.col-md-22.col-lg-14.offset-md-1.offset-lg-0
-          h2.header__subtitle!=content.index.header.subtitle
-        .col-24.col-md-18.col-lg-14.offset-md-3.offset-lg-0
-          .header__text!=content.index.header.text 
-        .col-24.col-md-14.col-lg-8.offset-md-5.offset-lg-0
-          button.button.button--size.header__btn(data-toggle="modal", data-target="#header__modal")!=content.index.header.btn.text   
+          .header__box
+            .header__item
+              i.fa.fa-chevron-right(aria-hidden='true')
+              | Довезем в Евросоюз без очередей на границе
+            .header__item
+              i.fa.fa-chevron-right(aria-hidden='true')
+              | Наши эксперты помогут с выбором авто
+            .header__item
+              i.fa.fa-chevron-right(aria-hidden='true')
+              | Растаможим или легализируем авто на территории Украины
+            .header__item
+              i.fa.fa-chevron-right(aria-hidden='true')
+              | Сэкономим вам деньги
+        .col-24.col-md-14.col-lg-10.offset-md-5.offset-lg-0
+          button.button.button--size.header__btn(data-toggle='modal', data-target='#header__modal--a') Оставить заявку на консультацию

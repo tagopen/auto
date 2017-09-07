@@ -15,7 +15,7 @@
     <meta name="MobileOptimized" content="320"/>
     <!--[if IEMobile]><meta http-equiv='cleartype' content='on' /><![endif]-->
     <!-- Replace favicon.ico and apple-touch-icon.png-->
-    <link rel="shortcut icon" type="image/png" href="img/logo/favicon.png">
+    <link rel="shortcut icon" type="image/ico" href="img/logo/favicon.ico">
     <link rel="apple-touch-icon" type="image/png" href="img/logo/apple-touch-icon.png">
     <!-- Disables automatic  of possible phone numbers and address in Safari on iOS-->
     <meta name="format-detection" content="telephone=no"/>
@@ -69,11 +69,11 @@
             <div class="col flex-md-last flex-lg-first">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-fill w-100">
-                  <li class="nav-item"><a class="nav-link nav__link nav-link--active" href="#tour">Тур по авторынкам</a></li>
-                  <li class="nav-item"><a class="nav-link nav__link" href="#build">Пригон авто</a></li>
-                  <li class="nav-item"><a class="nav-link nav__link" href="#cost">Важно знать!</a></li>
-                  <li class="nav-item"><a class="nav-link nav__link" href="/link2">Наши услуги</a></li>
-                  <li class="nav-item"><a class="nav-link nav__link" href="/link2">Отзывы</a></li>
+                  <li class="nav-item"><a class="nav-link nav__link nav-link--active" href="#intro">Тур по авторынкам</a></li>
+                  <li class="nav-item"><a class="nav-link nav__link" href="#delivery">Пригон авто</a></li>
+                  <li class="nav-item"><a class="nav-link nav__link" href="#reason">Важно знать!</a></li>
+                  <li class="nav-item"><a class="nav-link nav__link" href="#service">Наши услуги</a></li>
+                  <li class="nav-item"><a class="nav-link nav__link" href="#gallery">Галерея</a></li>
                 </ul>
               </div>
             </div>
@@ -99,7 +99,7 @@
         </div>
       </div>
     </header>
-    <section class="intro">
+    <section class="intro" id="intro">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-24 col-md-20 col-lg-16">
@@ -122,7 +122,7 @@
                   <div class="intro__icon"><img src="img/auto.svg" alt="Иконка"></div>
                 </div>
                 <div class="intro__info">
-                  <div class="intro__text">Наши эксперты консультируют вас, проверяют состояние машины специальными оборудованием, помогают совершить покупку, оформить все документы и доставить автомобиль в Украину!</div>
+                  <div class="intro__text">Вы получите профессиональную консультацию экспертов по выбору машины, проверку состояния авто специальным оборудованием, помощь при оформлении документов и доставке авто в Украину.</div>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@
         </div>
       </div>
     </section>
-    <section class="advantage">
+    <section class="advantage" id="advantage">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-24 col-md-20 col-lg-18">
@@ -177,7 +177,7 @@
         </div>
       </div>
     </section>
-    <section class="reason">
+    <section class="reason" id="reason">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-24 col-lg-18">
@@ -194,7 +194,7 @@
                 <div class="col-24 col-lg-11 col-xsl-12"> 
                   <div class="reason__info">
                     <div class="reason__title">Экономия ваших денег</div>
-                    <div class="reason__text">Услуга доставки автомобиля из Европы порой достигает 1500 евро! А за участие в автотуре вы платите всего 200 евро! При этом вы самостоятельно выберите автомобиль, будете уверены в его исправности и цене, а также получите положительные эмоции от путешествия по Европе!</div>
+                    <div class="reason__text">Услуга доставки автомобиля из Европы порой достигает 1000 евро! А за участие в автотуре вы платите всего 200 евро! При этом вы самостоятельно выберите автомобиль, будете уверены в его исправности и цене, а также получите положительные эмоции от путешествия по Европе!</div>
                     <div class="reason__icon"></div>
                   </div>
                 </div>
@@ -207,8 +207,8 @@
                 </div>
                 <div class="col-24 col-lg-11 col-xsl-12"> 
                   <div class="reason__info">
-                    <div class="reason__title">Защищаем вас от 20% наценки на автомобиль</div>
-                    <div class="reason__text">Когда вы покупаете автомобиль лично, в Европе, то вы защищены от риска, <span class="reason__text--span">переплатить значительную сумму</span> перегонщику авто! Вы платите продавцу машины фактическую стоимость! А как поступают перегонщики? Помимо стоимости перегона они делают дополнительную наценку на машину в районе 10-20%. Так они зарабатывают ещё больше.</div>
+                    <div class="reason__title">Защищаем вас от значительной переплаты за автомобиль</div>
+                    <div class="reason__text">Принимая участие в нашем туре Вы лично присутствуете при покупке автомобиля, что дает вам возможность <span class="reason__text--span">сторговать</span> от 200 до 1000 евро от фактической стоимости авто.</div>
                     <div class="reason__icon"></div>
                   </div>
                 </div>
@@ -222,7 +222,7 @@
                 <div class="col-24 col-lg-11 col-xsl-12"> 
                   <div class="reason__info">
                     <div class="reason__title">Перегонщики могут скручивать пробег</div>
-                    <div class="reason__text">Малоизвестные перегонщики могут скручивать одометр и снижать пробег авто на 100-300 тыс. км. Как следствие, уже через 1000-3000 км езды после покупки, в вашем автомобиле начнут возникать неисправности. В нашем туре мы проверяем выбранный вами автомобиль с помощью специального оборудования. Оно позволяет выявить неисправности машины ещё до совершения сделки! Проверяем реальный пробег, битая машина или нет, была ли крашена, отслеживаем по автомобильным базам и прочее.</div>
+                    <div class="reason__text">Недобросовестные перегонщики  могут скручивать одометр и снижать пробег авто на 100-300 тыс. км. Как следствие, вы покупаете автомобиль, фактическое состояние которого не соответствует заявленному. В нашем туре мы проверяем выбранный вами автомобиль с помощью специального оборудования. Оно позволяет выявить неисправности машины ещё до совершения сделки! Проверяем реальный пробег, битая машина или нет, была ли крашена, отслеживаем по автомобильным базам.</div>
                     <div class="reason__icon"></div>
                   </div>
                 </div>
@@ -235,7 +235,7 @@
                 </div>
                 <div class="col-24 col-lg-11 col-xsl-12"> 
                   <div class="reason__info">
-                    <div class="reason__title">Для временного улучшения работы двигателя перегонщики добавляют присадки</div>
+                    <div class="reason__title">Для временного улучшения работы двигателя иногда добавляют присадки</div>
                     <div class="reason__text">Заказывая пригон у непроверенных перегонщиков есть риск получить неисправный автомобиль. Они могут добавлять <div class="reason__text--hover">присадки <i class="ic ic--question hidden-sm-down"></i><span class="reason__text--tooltip hidden-sm-down">Присадки для двигателя — это вещество по типу смазки, которое добавляется в моторное масло для достижения различных целей. Например, для реставрации внутренней поверхности двигателя, который имеет большой пробег. Они призваны закрыть мелкие трещины в стенках цилиндра и тем самым повысить компрессию и мощность двигателя.</span></div> в двигатель или коробку передач, за счет которых машина начинает работать лучше. Но положительный эффект длиться недолго, и через пару недель вы заметите неисправности автомобиля. Перегонщикам главное, чтобы на момент передачи вам автомобиля он был в идеальном состоянии, а что будет с ним через месяц - их уже не интересует.</div>
                     <div class="reason__icon"></div>
                   </div>
@@ -246,7 +246,7 @@
         </div>
       </div>
     </section>
-    <section class="detail">
+    <section class="detail" id="detail">
       <div class="container">
         <div class="row">
           <div class="col-24 col-md-18 col-lg-13">
@@ -466,16 +466,16 @@
         </div>
       </div>
     </section>
-    <section class="delivery">
+    <section class="delivery" id="delivery">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-24 col-md-20 col-lg-16">
-            <h2 class="heading delivery__heading">Доставка автомобилей из Европы на заказ</h2>
+            <h2 class="heading delivery__heading">Если вы желаете сэкономить свое время, то мы можем пригнать вам автомобиль из Европы.</h2>
           </div>
         </div>
         <div class="row">   
           <div class="col-24 col-md-20 offset-md-2 col-lg-11 offset-lg-12">
-            <h3 class="delivery__subheading">Доставка автомобилей из Европы на заказ</h3>
+            <h3 class="delivery__subheading">Если вы желаете сэкономить свое время, то мы можем пригнать вам автомобиль из Европы.</h3>
           </div>
         </div>
         <div class="row">   
@@ -491,7 +491,7 @@
                 <div class="delivery__text">Срок выполнения заказа до 10 дней<i class="ic ic--check"> </i></div>
               </div>
               <div class="delivery__item animate" data-animation="deliveryFadeInRight">
-                <div class="delivery__text">Работаем по договору, привезем машину к Вашему дому<i class="ic ic--check"> </i></div>
+                <div class="delivery__text">Работаем по договору, доставим машину к Вашему дому<i class="ic ic--check"> </i></div>
               </div>
               <div class="delivery__item animate" data-animation="deliveryFadeInRight">
                 <div class="delivery__text">Сделаем растаможку или оформим на вас машину с европейскими номерами<i class="ic ic--check"> </i></div>
@@ -531,7 +531,7 @@
         </div>
       </div>
     </section>
-    <section class="service">
+    <section class="service" id="service">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-24">
@@ -548,19 +548,23 @@
           <div class="col-24 col-md-16 col-lg-12 offset-lg-1">
             <div class="service__box">
               <div class="service__item animate" data-animation="serviceFadeInLeft">
-                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Проводим туры в Европу для покупки авто
+                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Организация туров в Европу для покупки авто
                 </div>
               </div>
               <div class="service__item animate" data-animation="serviceFadeInLeft">
-                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Пригоняем машины на заказ
+                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Пригон автомобилей  на заказ
                 </div>
               </div>
               <div class="service__item animate" data-animation="serviceFadeInLeft">
-                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Регистрируем авто на иностранных номерах
+                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Регистрация авто на иностранных номерах
                 </div>
               </div>
               <div class="service__item animate" data-animation="serviceFadeInLeft">
-                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Оказываем помощь в продаже авто
+                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Растаможка автомобилей
+                </div>
+              </div>
+              <div class="service__item animate" data-animation="serviceFadeInLeft">
+                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Помощь в продаже авто
                 </div>
               </div>
               <div class="service__item animate" data-animation="serviceFadeInLeft">
@@ -568,11 +572,11 @@
                 </div>
               </div>
               <div class="service__item animate" data-animation="serviceFadeInLeft">
-                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Занимаемся растаможкой
+                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Замена авто с вашей или нашей доплатой
                 </div>
               </div>
               <div class="service__item animate" data-animation="serviceFadeInLeft">
-                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Замена авто с вашей или нашей доплатой
+                <div class="service__text"><i class="fa fa-chevron-right" aria-hidden="true"></i>Оформление и продление европейской страховки
                 </div>
               </div>
               <div class="service__item animate" data-animation="serviceFadeInLeft">
@@ -588,7 +592,7 @@
         </div>
       </div>
     </section>
-    <section class="work">
+    <section class="work" id="work">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-24 col-md-20 col-lg-16">
@@ -664,22 +668,20 @@
           <div class="col-14 col-md-7 col-lg-5 d-flex align-items-center text-center text-md-left">
             <div class="footer__text">Помогаем приобрести автомобиль из Европы</div>
           </div>
-          <div class="col-18 col-md-6 col-lg-9 text-center flex-md-last">
+          <div class="col-18 col-md-6 col-lg-6 text-center flex-md-last">
             <div class="footer__numbers"><i class="ic ic--phone"></i>
-              <div class="footer__number"><a class="footer__link" href="tel:0912344567">091 234 45 67</a></div>
-              <div class="footer__number"><a class="footer__link" href="tel:0912344567">091 234 45 67</a></div>
+              <div class="footer__number"><a class="footer__link" href="tel:0678000144">067-800-0144</a></div>
+              <div class="footer__number"><a class="footer__link" href="tel:0504078836">050-407-8836</a></div>
             </div>
           </div>
-          <div class="col-16 col-md-11 col-lg-10 d-flex align-items-center text-lg-right">
-            <div class="footer__creater text-center">
-              <div class="footer__text">Сделано с душой студией</div><i class="ic ic--well">       </i>
-            </div>
+          <div class="col-16 col-md-11 col-lg-13 d-flex align-items-center text-lg-right">
+            <div class="footer__creater text-center"><a class="footer__text" href="http://well-done.com.ua/?utm_source=website&amp;utm_medium=clientfooter&amp;utm_campaign=rolidasauto">Сделано с душой студией</a><i class="ic ic--well">       </i></div>
           </div>
         </div>
       </div>
     </footer>
     <div class="modal fade" id="call__modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal__size"> 
+      <div class="modal-dialog modal__size modal--yellow">
         <div class="modal-content modal__content">
           <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
@@ -697,11 +699,11 @@
           <div class="modal__heading">Мы знаем, что у вас есть много вопросов. Оставьте контактный номер и получите ответы от нашего эксперта.</div>
           <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
             <div class="row justify-content-center">
-              <div class="col-24 form-group form__group"> 
-                <input class="form-control form__input form__input--phone form__phone" aria-invalid="false" placeholder="Введите ваш телефон" name="phone" type="tel" required>
+              <div class="col-24 form-group form__group">
+                <input class="form-control form__input form__input--phone form__phone" aria-invalid="false" placeholder="Введите ваш телефон" name="phone" type="tel" required="">
               </div>
-              <div class="col-24">   
-                <button class="button button--size modal__btn" name="form" value="Обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить каталог с ценами</button>
+              <div class="col-24">
+                <button class="button button--size modal__btn" name="form" value="Обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок эксперта</button>
               </div>
             </div>
           </form>
@@ -709,7 +711,7 @@
       </div>
     </div>
     <div class="modal fade" id="header__modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal__size"> 
+      <div class="modal-dialog modal__size modal--yellow">
         <div class="modal-content modal__content"><i class="ic ic--katalog1 hidden-sm-down"></i><i class="ic ic--katalog2 hidden-sm-down"></i>
           <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
@@ -724,25 +726,53 @@
               <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
             </svg>
           </button>
-          <div class="modal__heading">За последнее время мы помогли пригнать в Украину 100 автомобилей. Получите полный список машин с ценами, моделями и фотографиями. Укажите ваш email и письмо с каталогом придет вам на почту в течении 2 минут</div>
+          <div class="modal__heading">Укажите ваш номер телефона, чтобы мы могли рассказать вам о способах экономии при покупке европейского автомобиля. Мы проконсультируем вас по всем вопросам абсолютно бесплатно!</div>
           <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
             <div class="row justify-content-center">
-              <div class="col-24 form-group form__group"> 
-                <input class="form-control form__input form__name" aria-invalid="false" placeholder="Ваше имя" name="name" type="text" required>
+              <div class="col-24 form-group form__group">
+                <input class="form-control form__input form__input--phone form__phone" aria-invalid="false" placeholder="Введите ваш номер телефона" name="phone" type="tel" required="">
               </div>
-              <div class="col-24 form-group form__group"> 
-                <input class="form-control form__input form__email" aria-invalid="false" placeholder="Введите ваш e-mail" name="email" type="email" required>
-              </div>
-              <div class="col-24">   
-                <button class="button button--size modal__btn" name="form" value="Обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить каталог с ценами </button>
+              <div class="col-24">
+                <button class="button button--size modal__btn" name="form" value="Обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить консультацию и узнать об экономии</button>
               </div>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="sibassa1__modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal__size modal--big">
+    <div class="modal fade" id="header__modal--a" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__size modal--yellow">
+        <div class="modal-content modal__content"><i class="ic ic--katalog1 hidden-sm-down"></i><i class="ic ic--katalog2 hidden-sm-down"></i>
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="modal__title">Оставьте заявку</div>
+          <div class="modal__heading">Мы подскажем как это работает.<br>Как избежать рисков при покупке.<br>Сколько стоит интересующий Вас авто и многое другое</div>
+          <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
+            <div class="row justify-content-center">
+              <div class="col-24 form-group form__group">
+                <input class="form-control form__input form__input--phone form__phone" aria-invalid="false" placeholder="Введите ваш номер телефона" name="phone" type="tel" required="">
+              </div>
+              <div class="col-24">
+                <button class="button button--size modal__btn" name="form" value="Обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Оставить заявку на консультацию           </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="sibassa__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal--big"><i class="ic ic--light1 hidden-sm-down"></i><i class="ic ic--light2 hidden-sm-down"></i><i class="ic ic--light3 hidden-sm-down"></i><i class="ic ic--light4 hidden-sm-down"></i>
         <div class="modal-content modal__content modal__content--red">
           <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
@@ -761,14 +791,190 @@
           <div class="modal__heading">Мы подготовили для вас инструкцию-помощник. Она состоит из 15 ответов на самые популярные вопросы полиции к владельцам автомобиля из Европы! Вы сможете грамотно ответить на любой вопрос и не дадите себя развести!</div>
           <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
             <div class="row justify-content-center">
-              <div class="col-24 form-group form__group"> 
-                <input class="form-control form__input form__email" aria-invalid="false" placeholder="Введите ваш e-mail" name="email" type="email" required>
+              <div class="col-24 form-group form__group">
+                <input class="form-control form__input form__email" aria-invalid="false" placeholder="Введите ваш e-mail" name="email" type="email" required="">
               </div>
-              <div class="col-24">   
-                <button class="button button--size modal__btn" name="form" value="Обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить файл с рекомендациями                         </button>
+              <div class="col-24">
+                <button class="button button--size modal__btn" name="form" value="Обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить файл с рекомендациями </button>
               </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="video__modal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal--size">
+        <div class="modal-content modal__content modal__video">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="video__elem">
+            <iframe src="" frameborder="0" allowfullscreen="">   </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="video__modal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal--size">
+        <div class="modal-content modal__content modal__video">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="video__elem">
+            <iframe src="" frameborder="0" allowfullscreen="">   </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="video__modal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal--size">
+        <div class="modal-content modal__content modal__video">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="video__elem">
+            <iframe src="" frameborder="0" allowfullscreen="">   </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="video__modal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal--size">
+        <div class="modal-content modal__content modal__video">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="video__elem">
+            <iframe src="" frameborder="0" allowfullscreen="">   </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="video__modal5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal--size">
+        <div class="modal-content modal__content modal__video">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="video__elem">
+            <iframe src="" frameborder="0" allowfullscreen="">   </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="video__modal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal--size">
+        <div class="modal-content modal__content modal__video">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="video__elem">
+            <iframe src="" frameborder="0" allowfullscreen="">   </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="video__modal7" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal--size">
+        <div class="modal-content modal__content modal__video">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="video__elem">
+            <iframe src="" frameborder="0" allowfullscreen="">   </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="video__modal8" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal--size">
+        <div class="modal-content modal__content modal__video">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="video__elem">
+            <iframe src="" frameborder="0" allowfullscreen=""> </iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -788,6 +994,8 @@
     <!-- ContactForm JavaScript-->
     <script src="js/validator.js"> </script>
     <script src="js/contact_me.js">  </script>
+    <!-- Fancybox 3 JavaScript-->
+    <script src="js/jquery.fancybox.js"></script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->

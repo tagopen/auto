@@ -1,5 +1,5 @@
 #call__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
-  .modal-dialog.modal__size 
+  .modal-dialog.modal__size.modal--yellow
     .modal-content.modal__content
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
@@ -9,15 +9,16 @@
                 rdf:description(rdf:about='')
           defs
           path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
-      .modal__heading!=content.index.modal1.heading
+      .modal__heading
+        | Мы знаем, что у вас есть много вопросов. Оставьте контактный номер и получите ответы от нашего эксперта.
       form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
         .row.justify-content-center
-          .col-24.form-group.form__group 
-            input.form-control.form__input.form__input--phone.form__phone(aria-invalid='false', placeholder="Введите ваш телефон", name='phone', type='tel', required)
-          .col-24    
-            button.button.button--size.modal__btn(name='form', value='Обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить каталог с ценами
+          .col-24.form-group.form__group
+            input.form-control.form__input.form__input--phone.form__phone(aria-invalid='false', placeholder='Введите ваш телефон', name='phone', type='tel', required='')
+          .col-24
+            button.button.button--size.modal__btn(name='form', value='Обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок эксперта
 #header__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
-  .modal-dialog.modal__size 
+  .modal-dialog.modal__size.modal--yellow
     .modal-content.modal__content
       i.ic.ic--katalog1.hidden-sm-down
       i.ic.ic--katalog2.hidden-sm-down
@@ -29,17 +30,46 @@
                 rdf:description(rdf:about='')
           defs
           path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
-      .modal__heading!=content.index.modal2.heading
+      .modal__heading
+        | Укажите ваш номер телефона, чтобы мы могли рассказать вам о способах экономии при покупке европейского автомобиля. Мы проконсультируем вас по всем вопросам абсолютно бесплатно!
       form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
         .row.justify-content-center
-          .col-24.form-group.form__group 
-            input.form-control.form__input.form__name(aria-invalid='false', placeholder="Ваше имя", name='name', type='text', required)
-          .col-24.form-group.form__group 
-            input.form-control.form__input.form__email(aria-invalid='false', placeholder="Введите ваш e-mail", name='email', type='email', required)    
-          .col-24    
-            button.button.button--size.modal__btn(name='form', value='Обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить каталог с ценами 
-#sibassa1__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
-  .modal-dialog.modal__size.modal--big
+          .col-24.form-group.form__group
+            input.form-control.form__input.form__input--phone.form__phone(aria-invalid='false', placeholder='Введите ваш номер телефона', name='phone', type='tel', required='')
+          .col-24
+            button.button.button--size.modal__btn(name='form', value='Обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить консультацию и узнать об экономии
+#header__modal--a.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size.modal--yellow
+    .modal-content.modal__content
+      i.ic.ic--katalog1.hidden-sm-down
+      i.ic.ic--katalog2.hidden-sm-down
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .modal__title Оставьте заявку
+      .modal__heading
+        | Мы подскажем как это работает.
+        br
+        | Как избежать рисков при покупке.
+        br
+        | Сколько стоит интересующий Вас авто и многое другое
+      form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
+        .row.justify-content-center
+          .col-24.form-group.form__group
+            input.form-control.form__input.form__input--phone.form__phone(aria-invalid='false', placeholder='Введите ваш номер телефона', name='phone', type='tel', required='')
+          .col-24
+            button.button.button--size.modal__btn(name='form', value='Обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Оставить заявку на консультацию           
+#sibassa__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal--big
+    i.ic.ic--light1.hidden-sm-down
+    i.ic.ic--light2.hidden-sm-down
+    i.ic.ic--light3.hidden-sm-down
+    i.ic.ic--light4.hidden-sm-down
     .modal-content.modal__content.modal__content--red
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
@@ -49,11 +79,116 @@
                 rdf:description(rdf:about='')
           defs
           path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
-      .modal__title!=content.index.sibassa.title     
-      .modal__heading!=content.index.sibassa.heading
+      .modal__title Полиция будет бессильна!
+      .modal__heading
+        | Мы подготовили для вас инструкцию-помощник. Она состоит из 15 ответов на самые популярные вопросы полиции к владельцам автомобиля из Европы! Вы сможете грамотно ответить на любой вопрос и не дадите себя развести!
       form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
         .row.justify-content-center
-          .col-24.form-group.form__group 
-            input.form-control.form__input.form__email(aria-invalid='false', placeholder="Введите ваш e-mail", name='email', type='email', required)    
-          .col-24    
-            button.button.button--size.modal__btn(name='form', value='Обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить файл с рекомендациями                         
+          .col-24.form-group.form__group
+            input.form-control.form__input.form__email(aria-invalid='false', placeholder='Введите ваш e-mail', name='email', type='email', required='')
+          .col-24
+            button.button.button--size.modal__btn(name='form', value='Обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить файл с рекомендациями 
+#video__modal1.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg.modal--size
+    .modal-content.modal__content.modal__video
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .video__elem
+        iframe(src='', frameborder='0', allowfullscreen='')    
+#video__modal2.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg.modal--size
+    .modal-content.modal__content.modal__video
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .video__elem
+        iframe(src='', frameborder='0', allowfullscreen='')    
+#video__modal3.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg.modal--size
+    .modal-content.modal__content.modal__video
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .video__elem
+        iframe(src='', frameborder='0', allowfullscreen='')    
+#video__modal4.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg.modal--size
+    .modal-content.modal__content.modal__video
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .video__elem
+        iframe(src='', frameborder='0', allowfullscreen='')    
+#video__modal5.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg.modal--size
+    .modal-content.modal__content.modal__video
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .video__elem
+        iframe(src='', frameborder='0', allowfullscreen='')    
+#video__modal6.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg.modal--size
+    .modal-content.modal__content.modal__video
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .video__elem
+        iframe(src='', frameborder='0', allowfullscreen='')    
+#video__modal7.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg.modal--size
+    .modal-content.modal__content.modal__video
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .video__elem
+        iframe(src='', frameborder='0', allowfullscreen='')    
+#video__modal8.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg.modal--size
+    .modal-content.modal__content.modal__video
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .video__elem
+        iframe(src='', frameborder='0', allowfullscreen='') 

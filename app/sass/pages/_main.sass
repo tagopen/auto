@@ -1494,7 +1494,151 @@ a
         right: 0
     &__text
       font: 500 24px/36px $font-gotham 
-      margin-bottom: 40px                 
+      margin-bottom: 40px        
+
++comment('gallery style')
+.gallery
+  overflow: hidden
+  &__col
+    padding: 0
+  &__video
+    display: block
+    height: 120px
+    background-size: cover !important
+    background-position: center !important
+    cursor: pointer
+    &--1
+      background: url(../img/video1.jpg)
+    &--2
+      background: url(../img/video2.jpg)
+    &--3
+      background: url(../img/video3.jpg)
+    &--4
+      background: url(../img/video4.jpg)
+    &--5
+      background: url(../img/video5.jpg)
+    &--6
+      background: url(../img/video6.jpg)
+    &--7
+      background: url(../img/video7.jpg)
+    &--8
+      background: url(../img/video8.jpg)
+  &__box
+    height: 120px
+    overflow: hidden
+    &:hover, 
+    &:focus 
+      .gallery__link
+        transform: scale(1.1)
+  &__link
+    background-size: cover !important
+    background-position: center !important
+    transition: all .3s ease
+    &--1
+      background: url(../img/gallery1.jpg)
+    &--2
+      background: url(../img/gallery2.jpg)
+    &--3
+      background: url(../img/gallery3.jpg)
+    &--4
+      background: url(../img/gallery4.jpg)
+    &--5
+      background: url(../img/gallery5.jpg)
+    &--6
+      background: url(../img/gallery6.jpg)
+    &--7
+      background: url(../img/gallery7.jpg)
+    &--8
+      background: url(../img/gallery8.jpg)
+    &--9
+      background: url(../img/gallery9.jpg)
+    &--10
+      background: url(../img/gallery10.jpg)
+    &--11
+      background: url(../img/gallery11.jpg)
+    &--12
+      background: url(../img/gallery12.jpg)
+    &--13
+      background: url(../img/gallery13.jpg)
+    &--14
+      background: url(../img/gallery14.jpg)
+    &--15
+      background: url(../img/gallery15.jpg)
+    &--16
+      background: url(../img/gallery16.jpg)
+  &__link
+    display: block
+    height: 100%
+    width: 100%
+  &__video
+    position: relative
+    .ic--video
+      position: absolute
+      right: 0
+      top: 0
+      transform: scale(0.9)
+  &__icon
+    cursor: pointer
+    display: inline-block
+    position: absolute
+    left: 50%
+    top: 50%
+    margin: -23px 0 0 -23px
+    height: 46px
+    width: 46px
+    background: #fff
+    border-radius: 50%
+    color: #ffb71d
+    text-align: center
+    line-height: 42px
+
+.fancybox-skin
+  padding: 0 !important
+  -webkit-border-radius: 0 !important
+  border-radius: 0 !important
+
+.modal
+  &--size
+    min-width: 320px
+
+.modal
+  &__video
+    padding: 0
+    border: 0
+    .modal__close
+      top: -30px
+      right: 0
+      fill: #ffb71d
+
+.video
+  &__elem
+    height: 300px
+    width: 100%
+    position: relative
+    iframe
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
++r(760)
+  .modal
+    &--size
+      max-width: none
+      width: 700px
+  .video
+    &__elem
+      height: 400px
+  .gallery
+    &__box
+      height: 178px
+    &__video
+      height: 178px
+      .ic--video
+        position: absolute
+        right: 10px
+        top: 10px
+        transform: scale(1)
 +comment("map style")   
 .map  
   overflow: hidden
@@ -1578,6 +1722,9 @@ a
     font: 400 12px/14px $font-gotham
     color: #fff
     margin-bottom: 15px
+    &:hover,
+    &:focus
+      color: #ffb71d
   &__creater
     margin: 0 auto 15px 
   &__numbers
@@ -1604,3 +1751,26 @@ a
       margin: 0    
     .ic--well
       margin-left: 20px
+
++comment('success page style')
+.success
+  &__title
+    font: 900 30px/40px $font-gotham
+    color: #212121
+    text-align: center
+    margin-bottom: 30px
+  &__text 
+    font: 500 20px/30px $font-gotham
+    color: #212121
+    text-align: center
+    margin-bottom: 25px
+  &__image
+    text-align: center
+    img
+      display: inline-block
++r(760)
+  .success
+    &__title
+      font: 900 40px/60px $font-gotham
+    &__text
+      font: 500 24px/36px $font-gotham

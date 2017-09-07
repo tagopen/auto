@@ -29,7 +29,7 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     //[if IEMobile]><meta http-equiv='cleartype' content='on' /><![endif]
 
     // Replace favicon.ico and apple-touch-icon.png
-    link(rel='shortcut icon' type='image/png' href='img/logo/' + content.site.meta.favicon)
+    link(rel='shortcut icon' type='image/ico' href='img/logo/' + content.site.meta.favicon)
     link(rel='apple-touch-icon' type='image/png' href='img/logo/' + content.site.meta.appleTouchIcon)
 
     // Disables automatic  of possible phone numbers and address in Safari on iOS
@@ -99,6 +99,8 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     block scripts
     //- Slick-Slider JavaScript
     //- script(src='js/slick.js')
+    // Fancybox 3 JavaScript
+    script(src='js/jquery.fancybox.js')
     // Custom JavaScript
     script(src='js/main.js')
 
