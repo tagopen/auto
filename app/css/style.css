@@ -1030,6 +1030,7 @@ a:hover, a:focus {
 .header__number .footer__link {
   margin-bottom: 0;
   font: 700 18px/27px "GothamPro", sans-serif;
+  color: #212121;
 }
 
 .header__number .footer__link:hover, .header__number .footer__link:focus {
@@ -2139,6 +2140,9 @@ a:hover, a:focus {
   .tour__elem--text {
     font: 400 18px/27px "GothamPro", sans-serif;
     text-align: left;
+  }
+  .tour__elem--center {
+    text-align: center;
   }
   .tour__number{
     left: -5px;
