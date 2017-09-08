@@ -875,7 +875,7 @@ a:hover, a:focus {
 .nav__contact--text {
   display: inline-block;
   font: 500 14px/16px "GothamPro", sans-serif;
-  color: #ffb71d;
+  color: #212121;
 }
 
 .nav__btn .ic--phone {
@@ -932,7 +932,7 @@ a:hover, a:focus {
     font: 400 13px/21px "GothamPro", sans-serif;
   }
   .nav__contact--text {
-    border-bottom: 1px dashed #ffb71d;
+    border-bottom: 1px dashed #212121;
   }
   .nav__link {
     font: 400 12px/16px "GothamPro", sans-serif;
@@ -1029,7 +1029,7 @@ a:hover, a:focus {
 
 .header__number .footer__link {
   margin-bottom: 0;
-  font: 700 14px/18px "GothamPro", sans-serif;
+  font: 700 18px/27px "GothamPro", sans-serif;
 }
 
 .header__number .footer__link:hover, .header__number .footer__link:focus {
@@ -2012,37 +2012,15 @@ a:hover, a:focus {
 .tour__item {
   -webkit-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
           box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  background-color: #ededed;        
+  padding: 10px 20px;
+  margin: 0 -15px 10px;
 }
 
 .tour__box {
   position: relative;
-  padding: 40px 15px;
-  margin: 0 -15px;
-}
-
-.tour__box:before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
-.tour__box--1 {
-  background: url(../img/tour1bg.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 60px;
-}
-
-.tour__box--2 {
-  background: url(../img/tour2bg.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 35px;
+  padding: 10px 20px;
+  margin: 0 -15px 10px;
 }
 
 .tour__text {
@@ -2056,14 +2034,15 @@ a:hover, a:focus {
 .tour__number {
   display: inline-block;
   position: absolute;
-  top: -35px;
+  top: 50%;
   height: 70px;
   width: 70px;
+  margin-top: -35px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   background-color: #ffb71d;
   text-align: center;
-  font: 500 24px/46px "GothamPro", sans-serif;
+  font: 500 24px/66px "GothamPro", sans-serif;
   color: #212121;
 }
 
@@ -2124,7 +2103,7 @@ a:hover, a:focus {
             transform: translate3d(3000px, 0, 0);
   }
   .tour__box {
-    padding: 40px 20px;
+    padding: 10px 50px 10px 65px;
     margin: 0;
   }
   .tour__text {
@@ -2134,6 +2113,8 @@ a:hover, a:focus {
     margin-bottom: 45px;
     -webkit-transform: translate3d(3000px, 0, 0);
             transform: translate3d(3000px, 0, 0);
+    border-radius: 40px 0 0 40px;
+    margin: 0 0 25px;
   }
   .tour__elem {
     position: relative;
@@ -2158,6 +2139,9 @@ a:hover, a:focus {
   .tour__elem--text {
     font: 400 18px/27px "GothamPro", sans-serif;
     text-align: left;
+  }
+  .tour__number{
+    left: -5px;
   }
   .tour__elem--number {
     position: absolute;
@@ -2394,73 +2378,11 @@ a:hover, a:focus {
   .tour__text {
     font: 500 20px/30px "GothamPro", sans-serif;
   }
-  .tour__box {
-    padding: 70px;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
   .tour__box {
     overflow: hidden;
-  }
-  .tour__box--1 {
-    padding: 75px 190px 75px 45px;
-  }
-  .tour__box--1:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: -9%;
-    top: -20%;
-    height: 140%;
-    width: 82%;
-    background-color: rgba(0, 0, 0, 0.75);
-    -webkit-transform: rotate(15deg);
-        -ms-transform: rotate(15deg);
-            transform: rotate(15deg);
-  }
-  .tour__box--1:after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 120%;
-    width: 34%;
-    right: -9%;
-    top: -10%;
-    background-color: rgba(255, 183, 29, 0.5);
-    -webkit-transform: rotate(15deg);
-        -ms-transform: rotate(15deg);
-            transform: rotate(15deg);
-  }
-  .tour__box--2 {
-    padding: 75px 45px 75px 190px;
-  }
-  .tour__box--2:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: auto;
-    right: -9%;
-    top: -20%;
-    height: 140%;
-    width: 82%;
-    background-color: rgba(0, 0, 0, 0.75);
-    -webkit-transform: rotate(-15deg);
-        -ms-transform: rotate(-15deg);
-            transform: rotate(-15deg);
-  }
-  .tour__box--2:after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 120%;
-    width: 34%;
-    left: -9%;
-    top: -10%;
-    background-color: rgba(255, 183, 29, 0.5);
-    -webkit-transform: rotate(-15deg);
-        -ms-transform: rotate(-15deg);
-            transform: rotate(-15deg);
   }
   .tour__elem--left {
     padding: 10px 20px 10px 85px;
