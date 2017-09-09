@@ -1,37 +1,13 @@
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license*/
-
-.fancybox-wrap, 
-.fancybox-skin, 
-.fancybox-outer, 
-.fancybox-inner, 
-.fancybox-image
-  padding: 0
-  margin: 0
-  border: 0
-  outline: none
-  vertical-align: top
-
-.fancybox-wrap
-  iframe, object
-    padding: 0
-    margin: 0
-    border: 0
-    outline: none
-    vertical-align: top
-
-.fancybox-nav
-  padding: 0
-  margin: 0
-  border: 0
-  outline: none
-  vertical-align: top
-  span
-    padding: 0
-    margin: 0
-    border: 0
-    outline: none
-    vertical-align: top
-
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
 .fancybox-tmp
   padding: 0
   margin: 0
@@ -59,7 +35,8 @@
     -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5)
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5)
 
-.fancybox-outer
+.fancybox-outer,
+.fancybox-inner
   position: relative
 
 .fancybox-inner
@@ -67,8 +44,8 @@
   overflow: hidden
 
 .fancybox-type-iframe 
-.fancybox-inner
-  -webkit-overflow-scrolling: touch
+  .fancybox-inner
+    -webkit-overflow-scrolling: touch
 
 .fancybox-error
   color: #444
