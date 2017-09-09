@@ -403,49 +403,67 @@
 .ic--check:before {
   width: 30px;
   height: 31px;
-  background: url(../img/sprite.png) -1029px -385px no-repeat;
+  background: url(../img/sprite.png) -1175px -441px no-repeat;
 }
 
 .ic--detailcar:before {
   width: 142px;
   height: 56px;
-  background: url(../img/sprite.png) -1064px -274px no-repeat;
+  background: url(../img/sprite.png) -665px -749px no-repeat;
 }
 
 .ic--flag:before {
   width: 35px;
   height: 40px;
-  background: url(../img/sprite.png) -984px -385px no-repeat;
+  background: url(../img/sprite.png) -1011px -385px no-repeat;
 }
 
 .ic--flagcolor:before {
   width: 35px;
   height: 40px;
-  background: url(../img/sprite.png) -1176px -175px no-repeat;
+  background: url(../img/sprite.png) -1056px -385px no-repeat;
 }
 
 .ic--katalog1:before {
   width: 170px;
   height: 148px;
-  background: url(../img/sprite.png) -665px -662px no-repeat;
+  background: url(../img/sprite.png) 0px -1020px no-repeat;
 }
 
 .ic--katalog2:before {
   width: 102px;
   height: 89px;
-  background: url(../img/sprite.png) -1064px -175px no-repeat;
+  background: url(../img/sprite.png) -1089px -597px no-repeat;
 }
 
 .ic--light:before {
   width: 109px;
   height: 67px;
-  background: url(../img/sprite.png) -865px -385px no-repeat;
+  background: url(../img/sprite.png) -398px -841px no-repeat;
 }
 
-.ic--map:before {
-  width: 32px;
-  height: 31px;
-  background: url(../img/sprite.png) -1176px -225px no-repeat;
+.ic--light1:before {
+  width: 103px;
+  height: 97px;
+  background: url(../img/sprite.png) -976px -597px no-repeat;
+}
+
+.ic--light2:before {
+  width: 101px;
+  height: 99px;
+  background: url(../img/sprite.png) -865px -597px no-repeat;
+}
+
+.ic--light3:before {
+  width: 336px;
+  height: 256px;
+  background: url(../img/sprite.png) -665px -175px no-repeat;
+}
+
+.ic--light4:before {
+  width: 300px;
+  height: 146px;
+  background: url(../img/sprite.png) -865px -441px no-repeat;
 }
 
 .ic--modallight:before {
@@ -457,43 +475,49 @@
 .ic--phone:before {
   width: 17px;
   height: 18px;
-  background: url(../img/sprite.png) -1118px -340px no-repeat;
+  background: url(../img/sprite.png) -1155px -385px no-repeat;
 }
 
 .ic--question:before {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite.png) -1145px -340px no-repeat;
+  background: url(../img/sprite.png) -1182px -385px no-repeat;
 }
 
 .ic--reason1:before {
   width: 190px;
   height: 298px;
-  background: url(../img/sprite.png) -665px -175px no-repeat;
+  background: url(../img/sprite.png) -665px -441px no-repeat;
 }
 
 .ic--reason2:before {
   width: 181px;
   height: 146px;
-  background: url(../img/sprite.png) -872px -483px no-repeat;
+  background: url(../img/sprite.png) -207px -841px no-repeat;
 }
 
 .ic--reason3:before {
   width: 197px;
   height: 169px;
-  background: url(../img/sprite.png) -665px -483px no-repeat;
+  background: url(../img/sprite.png) 0px -841px no-repeat;
 }
 
 .ic--reason4:before {
   width: 189px;
   height: 200px;
-  background: url(../img/sprite.png) -865px -175px no-repeat;
+  background: url(../img/sprite.png) -1011px -175px no-repeat;
+}
+
+.ic--video:before {
+  width: 90px;
+  height: 67px;
+  background: url(../img/sprite.png) -517px -841px no-repeat;
 }
 
 .ic--well:before {
   width: 44px;
   height: 24px;
-  background: url(../img/sprite.png) -1064px -340px no-repeat;
+  background: url(../img/sprite.png) -1101px -385px no-repeat;
 }
 
 /* form */
