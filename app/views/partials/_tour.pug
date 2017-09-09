@@ -5,11 +5,11 @@ section.tour#tour
         h2.heading.tour__heading!=content.index.tour.heading
     .row.tour__row
       each item, i in content.index.tour.top
-        .col-24.col-md-12
+        .col-24
           .tour__item.animate(data-animation!=item.animate)
-            .tour__number(class="tour__number--"+(i+1))!=item.number
-            .tour__box(class="tour__box--"+(i+1))
-              .tour__text!=item.text
+            .tour__number.hidden-sm-down(class="tour__number--"+(i+1))!=item.number
+            .tour__box
+              .tour__elem--text.tour__elem--center!=item.text
     .row
       .col-24.col-md-12  
         .tour__title.animate(data-animation!=content.index.tour.with.animation)!=content.index.tour.with.title  
@@ -29,7 +29,7 @@ section.tour#tour
             .col-24        
               .tour__elem.tour__elem--right.d-flex.align-items-center.animate(class="tour__elem--"+(i+1), data-animation!=item.animation)
                 .tour__elem--text!=item.text
-                .tour__elem--number.tour__elem--number-right.hidden-sm-down!=item.number
+                .tour__elem--number.tour__elem--number-right.hidden-xs-up!=item.number
           .col-24.hidden-md-up
             .tour__image
               img.img-fluid(src!=content.index.tour.img320.src, alt!=content.index.tour.img320.alt)
