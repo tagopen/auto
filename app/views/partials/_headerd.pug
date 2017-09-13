@@ -1,14 +1,24 @@
 header.header
-  nav#mainNav.navbar.navbar-toggleable-sm.navbar-light
+  nav#mainNav.navbar.navbar-toggleable-md.navbar-light
     .container.nav__container
       .row.navbar__row.justify-content-between.justify-content-md-start.navbar__row.align-items-center
-        .col-10.col-sm-6.col-md-6.hidden-md-up
+        .col-10.col-sm-6.col-md-5.hidden-lg-up
           button.hidden-lg-up.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-icon
-        .col-sm-10.col-md-6.col-lg-5.hidden-sm-down.flex-lg-first
-          .logo__text!=content.site.nav.logo
-        .col-14.col-sm-8.col-md-18.col-lg-6.col-xl-5.flex-sm-last
+        .col-sm-10.col-md-11.col-lg-8.col-xl-7.hidden-sm-down.flex-lg-first
+          .row     
+            .col-24.col-md-8      
+              .logo     
+                img.img-fluid(src='img/logo/logo.png', alt='Лого')      
+            .col-24.col-md-16.align-self-center     
+              .logo__text!=content.site.nav.logo
+        .col-14.col-sm-8.col-md-8.col-lg-5.col-xl-4.flex-sm-last
           .nav__contact.ml-auto
+            .header__numbers
+              .header__number
+                a.footer__link(href='tel:0678000144') 067-800-0144
+              .header__number
+                a.footer__link(href='tel:0504078836') 050-407-8836
             a.nav__btn(data-toggle="modal", href="#call__modal")
               i.ic.ic--phone
               .nav__contact--text!=content.site.nav.btn.text
@@ -18,7 +28,7 @@ header.header
               each item, i in content.site.nav.links
                 li.nav-item
                   a.nav-link.nav__link(class={"nav-link--active": i === 0}, href=item.href)!= item.name
-                    if (i === 0) 
+                    if (i === 0)  
   .container.header__container
     .row.header__row.d-flex.align-items-lg-center
       .col-24.col-lg-12
