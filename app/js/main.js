@@ -25,6 +25,11 @@ $(document).ready(function() {
   $('.fancybox').fancybox();
 });
 
+// Masked phone
+$(function($){
+  $(".form__input--phone").mask("+38 (999) 9999999");
+});
+
 if( ($( window ).width() >= 760) && ($( window ).width() < 992) ) {
 
     $(document).ready(function(){

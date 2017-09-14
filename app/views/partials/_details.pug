@@ -15,10 +15,10 @@ section#detail.detail
         form.contactForm.cost__form(method='post', action='./mail/mail.php')
           .row
             .form-group.col-20.offset-2.col-md-11.offset-md-0.col-lg-10
-              input.form-control.form__input.form__phone.form__input--phone(type="tel", name="phone", placeholder="Введите ваш телефон", required)
+              input.form-control.form__input.form__phone.form__input--phone(type="tel", name="phone", placeholder="+38 (___) _______", required)
             .col-24.col-md-13.col-lg-14  
               .text-center
-                button.button.button--size.detail__btn(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.index.detail.btn
+                button.button.button--size.detail__btn(name='form', value='Узнайте подробности тура' type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.index.detail.btn
       .col-24.col-md-22.col-lg-14
         .detail__register
           .row.hidden-sm-down
