@@ -1028,6 +1028,10 @@ a:hover, a:focus {
   color: #ffb71d;
 }
 
+.header__numbers .footer__link:hover, .header__numbers .footer__link:focus {
+  color: #212121;
+}
+
 .header__form {
   background-color: white;
   border: 15px solid #ffbe33;
